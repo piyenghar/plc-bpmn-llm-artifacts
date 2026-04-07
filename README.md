@@ -111,6 +111,6 @@ A full code release is not included in this repository version.
 
 If you use these artifacts, please cite the corresponding paper:
 
-> *Process-Aware Generation of Operational Technology (OT) Security Requirements Using BPMN Context and Large Language Models*.
+> Padma Iyenghar and Elke Pulvermüller. “Process-Aware Generation of Operational Technology (OT) Security Requirements Using BPMN Context and Large Language Models.” In Proceedings of the 21st International Conference on Evaluation of Novel Approaches to Software Engineering (ENASE 2026). SciTePress, 2026.
 
 (Replace with final venue citation when available.)
