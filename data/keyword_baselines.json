@@ -1,0 +1,30 @@
+{
+    "Define Config & Access Requirements": [
+      "authentication for engineering interfaces",
+      "role-based access control",
+      "restricted remote engineering access",
+      "least-privilege configuration access",
+      "account management for authorized personnel"
+    ],
+    "Define Network & Protocol Security Requirements": [
+      "network segmentation between OT and IT zones",
+      "secure communication protocols where supported",
+      "restriction of exposed ports and services",
+      "communication integrity protection",
+      "access control for network-connected interfaces"
+    ],
+    "Define Patch Management Expectations": [
+      "vulnerability monitoring for PLC components",
+      "security patch assessment before deployment",
+      "controlled patch deployment procedures",
+      "maintenance scheduling for updates",
+      "rollback or recovery planning for failed updates"
+    ],
+    "Consolidate Requirements": [
+      "consistent structure across requirement categories",
+      "traceability between requirement groups",
+      "complete coverage of access, network, and patch topics",
+      "removal of redundant or conflicting requirements",
+      "preparation of a unified PLC security requirements specification"
+    ]
+  }

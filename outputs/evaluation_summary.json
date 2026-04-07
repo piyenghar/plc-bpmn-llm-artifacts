@@ -1,0 +1,193 @@
+{
+  "overall": {
+    "total_results": 96,
+    "passed": 62,
+    "failed": 34,
+    "pass_rate": 0.6458,
+    "avg_matched_count": 2.8854,
+    "threshold_rule": "pass if matched_count >= 3 of 5 baseline items"
+  },
+  "by_model": {
+    "gpt-5.4": {
+      "total": 48,
+      "passed": 35,
+      "failed": 13,
+      "matched_count_sum": 147,
+      "pass_rate": 0.7292,
+      "avg_matched_count": 3.0625
+    },
+    "meta-llama/Llama-3.3-70B-Instruct-Turbo": {
+      "total": 48,
+      "passed": 27,
+      "failed": 21,
+      "matched_count_sum": 130,
+      "pass_rate": 0.5625,
+      "avg_matched_count": 2.7083
+    }
+  },
+  "by_prompt_mode": {
+    "bpmn_only": {
+      "total": 24,
+      "passed": 15,
+      "failed": 9,
+      "matched_count_sum": 70,
+      "pass_rate": 0.625,
+      "avg_matched_count": 2.9167
+    },
+    "bpmn_plus_standards": {
+      "total": 24,
+      "passed": 17,
+      "failed": 7,
+      "matched_count_sum": 74,
+      "pass_rate": 0.7083,
+      "avg_matched_count": 3.0833
+    },
+    "standards_only": {
+      "total": 24,
+      "passed": 15,
+      "failed": 9,
+      "matched_count_sum": 68,
+      "pass_rate": 0.625,
+      "avg_matched_count": 2.8333
+    },
+    "task_only": {
+      "total": 24,
+      "passed": 15,
+      "failed": 9,
+      "matched_count_sum": 65,
+      "pass_rate": 0.625,
+      "avg_matched_count": 2.7083
+    }
+  },
+  "by_task_name": {
+    "Consolidate Requirements": {
+      "total": 24,
+      "passed": 2,
+      "failed": 22,
+      "matched_count_sum": 23,
+      "pass_rate": 0.0833,
+      "avg_matched_count": 0.9583
+    },
+    "Define Config & Access Requirements": {
+      "total": 24,
+      "passed": 24,
+      "failed": 0,
+      "matched_count_sum": 100,
+      "pass_rate": 1.0,
+      "avg_matched_count": 4.1667
+    },
+    "Define Network & Protocol Security Requirements": {
+      "total": 24,
+      "passed": 22,
+      "failed": 2,
+      "matched_count_sum": 88,
+      "pass_rate": 0.9167,
+      "avg_matched_count": 3.6667
+    },
+    "Define Patch Management Expectations": {
+      "total": 24,
+      "passed": 14,
+      "failed": 10,
+      "matched_count_sum": 66,
+      "pass_rate": 0.5833,
+      "avg_matched_count": 2.75
+    }
+  },
+  "baseline_item_hits": [
+    {
+      "task_name": "Consolidate Requirements",
+      "baseline_item": "complete coverage of access, network, and patch topics",
+      "matched_in_results": 9
+    },
+    {
+      "task_name": "Consolidate Requirements",
+      "baseline_item": "consistent structure across requirement categories",
+      "matched_in_results": 2
+    },
+    {
+      "task_name": "Consolidate Requirements",
+      "baseline_item": "preparation of a unified PLC security requirements specification",
+      "matched_in_results": 11
+    },
+    {
+      "task_name": "Consolidate Requirements",
+      "baseline_item": "traceability between requirement groups",
+      "matched_in_results": 1
+    },
+    {
+      "task_name": "Define Config & Access Requirements",
+      "baseline_item": "account management for authorized personnel",
+      "matched_in_results": 21
+    },
+    {
+      "task_name": "Define Config & Access Requirements",
+      "baseline_item": "authentication for engineering interfaces",
+      "matched_in_results": 15
+    },
+    {
+      "task_name": "Define Config & Access Requirements",
+      "baseline_item": "least-privilege configuration access",
+      "matched_in_results": 21
+    },
+    {
+      "task_name": "Define Config & Access Requirements",
+      "baseline_item": "restricted remote engineering access",
+      "matched_in_results": 21
+    },
+    {
+      "task_name": "Define Config & Access Requirements",
+      "baseline_item": "role-based access control",
+      "matched_in_results": 22
+    },
+    {
+      "task_name": "Define Network & Protocol Security Requirements",
+      "baseline_item": "access control for network-connected interfaces",
+      "matched_in_results": 9
+    },
+    {
+      "task_name": "Define Network & Protocol Security Requirements",
+      "baseline_item": "communication integrity protection",
+      "matched_in_results": 22
+    },
+    {
+      "task_name": "Define Network & Protocol Security Requirements",
+      "baseline_item": "network segmentation between OT and IT zones",
+      "matched_in_results": 22
+    },
+    {
+      "task_name": "Define Network & Protocol Security Requirements",
+      "baseline_item": "restriction of exposed ports and services",
+      "matched_in_results": 12
+    },
+    {
+      "task_name": "Define Network & Protocol Security Requirements",
+      "baseline_item": "secure communication protocols where supported",
+      "matched_in_results": 23
+    },
+    {
+      "task_name": "Define Patch Management Expectations",
+      "baseline_item": "controlled patch deployment procedures",
+      "matched_in_results": 24
+    },
+    {
+      "task_name": "Define Patch Management Expectations",
+      "baseline_item": "maintenance scheduling for updates",
+      "matched_in_results": 5
+    },
+    {
+      "task_name": "Define Patch Management Expectations",
+      "baseline_item": "rollback or recovery planning for failed updates",
+      "matched_in_results": 5
+    },
+    {
+      "task_name": "Define Patch Management Expectations",
+      "baseline_item": "security patch assessment before deployment",
+      "matched_in_results": 23
+    },
+    {
+      "task_name": "Define Patch Management Expectations",
+      "baseline_item": "vulnerability monitoring for PLC components",
+      "matched_in_results": 9
+    }
+  ]
+}

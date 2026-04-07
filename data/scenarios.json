@@ -1,0 +1,167 @@
+[
+    {
+      "scenario_id": "plc_req_01_conveyor_access",
+      "system_context": "Industrial PLC controlling an automated conveyor system in a manufacturing line.",
+      "task_name": "Define Config & Access Requirements",
+      "previous_task": "Review PLC vendor docs & specs",
+      "next_task": "Define Network & Protocol Security Requirements",
+      "expected_artifact": "Config & Access Requirements Spec",
+      "iec62443_principles": [
+        "identification and authentication control",
+        "use control",
+        "restricted engineering access",
+        "role-based access"
+      ]
+    },
+    {
+      "scenario_id": "plc_req_02_conveyor_network",
+      "system_context": "Industrial PLC controlling an automated conveyor system in a manufacturing line.",
+      "task_name": "Define Network & Protocol Security Requirements",
+      "previous_task": "Define Config & Access Requirements",
+      "next_task": "Define Patch Management Expectations",
+      "expected_artifact": "Network & Protocol Security Requirements",
+      "iec62443_principles": [
+        "network segmentation",
+        "secure communication",
+        "restricted exposed services",
+        "communication integrity"
+      ]
+    },
+    {
+      "scenario_id": "plc_req_03_conveyor_patch",
+      "system_context": "Industrial PLC controlling an automated conveyor system in a manufacturing line.",
+      "task_name": "Define Patch Management Expectations",
+      "previous_task": "Define Network & Protocol Security Requirements",
+      "next_task": "Consolidate Requirements",
+      "expected_artifact": "Patch Management Requirements",
+      "iec62443_principles": [
+        "security update management",
+        "vulnerability monitoring",
+        "controlled patch deployment",
+        "maintenance planning"
+      ]
+    },
+    {
+      "scenario_id": "plc_req_04_robot_access",
+      "system_context": "Industrial PLC controlling a robotic assembly cell with multiple actuators and sensors.",
+      "task_name": "Define Config & Access Requirements",
+      "previous_task": "Review PLC vendor docs & specs",
+      "next_task": "Define Network & Protocol Security Requirements",
+      "expected_artifact": "Config & Access Requirements Spec",
+      "iec62443_principles": [
+        "identification and authentication control",
+        "use control",
+        "restricted engineering access",
+        "role-based access"
+      ]
+    },
+    {
+      "scenario_id": "plc_req_05_robot_network",
+      "system_context": "Industrial PLC controlling a robotic assembly cell with multiple actuators and sensors.",
+      "task_name": "Define Network & Protocol Security Requirements",
+      "previous_task": "Define Config & Access Requirements",
+      "next_task": "Define Patch Management Expectations",
+      "expected_artifact": "Network & Protocol Security Requirements",
+      "iec62443_principles": [
+        "network segmentation",
+        "secure communication",
+        "restricted exposed services",
+        "communication integrity"
+      ]
+    },
+    {
+      "scenario_id": "plc_req_06_robot_patch",
+      "system_context": "Industrial PLC controlling a robotic assembly cell with multiple actuators and sensors.",
+      "task_name": "Define Patch Management Expectations",
+      "previous_task": "Define Network & Protocol Security Requirements",
+      "next_task": "Consolidate Requirements",
+      "expected_artifact": "Patch Management Requirements",
+      "iec62443_principles": [
+        "security update management",
+        "vulnerability monitoring",
+        "controlled patch deployment",
+        "maintenance planning"
+      ]
+    },
+    {
+      "scenario_id": "plc_req_07_packaging_access",
+      "system_context": "Industrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.",
+      "task_name": "Define Config & Access Requirements",
+      "previous_task": "Review PLC vendor docs & specs",
+      "next_task": "Define Network & Protocol Security Requirements",
+      "expected_artifact": "Config & Access Requirements Spec",
+      "iec62443_principles": [
+        "identification and authentication control",
+        "use control",
+        "restricted engineering access",
+        "role-based access"
+      ]
+    },
+    {
+      "scenario_id": "plc_req_08_packaging_network",
+      "system_context": "Industrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.",
+      "task_name": "Define Network & Protocol Security Requirements",
+      "previous_task": "Define Config & Access Requirements",
+      "next_task": "Define Patch Management Expectations",
+      "expected_artifact": "Network & Protocol Security Requirements",
+      "iec62443_principles": [
+        "network segmentation",
+        "secure communication",
+        "restricted exposed services",
+        "communication integrity"
+      ]
+    },
+    {
+      "scenario_id": "plc_req_09_packaging_patch",
+      "system_context": "Industrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.",
+      "task_name": "Define Patch Management Expectations",
+      "previous_task": "Define Network & Protocol Security Requirements",
+      "next_task": "Consolidate Requirements",
+      "expected_artifact": "Patch Management Requirements",
+      "iec62443_principles": [
+        "security update management",
+        "vulnerability monitoring",
+        "controlled patch deployment",
+        "maintenance planning"
+      ]
+    },
+    {
+      "scenario_id": "plc_req_10_conveyor_consolidate",
+      "system_context": "Industrial PLC controlling an automated conveyor system in a manufacturing line.",
+      "task_name": "Consolidate Requirements",
+      "previous_task": "Define Patch Management Expectations",
+      "next_task": "Approve PLC Security Requirements",
+      "expected_artifact": "Draft PLC Security Requirements",
+      "iec62443_principles": [
+        "complete lifecycle coverage",
+        "traceable security requirements",
+        "consistency across requirement categories"
+      ]
+    },
+    {
+      "scenario_id": "plc_req_11_robot_consolidate",
+      "system_context": "Industrial PLC controlling a robotic assembly cell with multiple actuators and sensors.",
+      "task_name": "Consolidate Requirements",
+      "previous_task": "Define Patch Management Expectations",
+      "next_task": "Approve PLC Security Requirements",
+      "expected_artifact": "Draft PLC Security Requirements",
+      "iec62443_principles": [
+        "complete lifecycle coverage",
+        "traceable security requirements",
+        "consistency across requirement categories"
+      ]
+    },
+    {
+      "scenario_id": "plc_req_12_packaging_consolidate",
+      "system_context": "Industrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.",
+      "task_name": "Consolidate Requirements",
+      "previous_task": "Define Patch Management Expectations",
+      "next_task": "Approve PLC Security Requirements",
+      "expected_artifact": "Draft PLC Security Requirements",
+      "iec62443_principles": [
+        "complete lifecycle coverage",
+        "traceable security requirements",
+        "consistency across requirement categories"
+      ]
+    }
+  ]

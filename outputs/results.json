@@ -1,0 +1,962 @@
+[
+  {
+    "timestamp_utc": "2026-03-12T20:37:28.254387+00:00",
+    "scenario_id": "plc_req_01_conveyor_access",
+    "task_name": "Define Config & Access Requirements",
+    "expected_artifact": "Config & Access Requirements Spec",
+    "prompt_mode": "bpmn_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nDefine Config & Access Requirements\n\nExpected output artifact:\nConfig & Access Requirements Spec\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Review PLC vendor docs & specs\nCurrent task: Define Config & Access Requirements\nNext task: Define Network & Protocol Security Requirements\n",
+    "response": "1. The PLC shall enforce role-based access control with unique user accounts, granting write, force, and mode-change privileges only to authorized engineering and maintenance roles while restricting operators to approved runtime actions.\n2. The PLC configuration shall require authenticated change management such that any logic, parameter, firmware, or communication-setting modification is approved, time-stamped, attributable to a named user, and restorable from a known-good backup.\n3. The PLC shall disable or lock unused local and remote access paths, including programming ports, web services, and vendor default accounts, and shall permit engineering access only through explicitly authorized interfaces during approved maintenance windows."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:37:32.318070+00:00",
+    "scenario_id": "plc_req_01_conveyor_access",
+    "task_name": "Define Config & Access Requirements",
+    "expected_artifact": "Config & Access Requirements Spec",
+    "prompt_mode": "bpmn_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nDefine Config & Access Requirements\n\nExpected output artifact:\nConfig & Access Requirements Spec\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Review PLC vendor docs & specs\nCurrent task: Define Config & Access Requirements\nNext task: Define Network & Protocol Security Requirements\n",
+    "response": "1. The PLC system must be configured to restrict access to authorized personnel with role-based authentication and authorization mechanisms.\n2. All configuration changes to the PLC system must be logged and tracked with timestamped records of user identity, change description, and affected system components.\n3. The PLC system must support secure communication protocols, such as HTTPS or SFTP, for remote access and configuration updates to prevent unauthorized data interception or modification."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:37:35.280192+00:00",
+    "scenario_id": "plc_req_01_conveyor_access",
+    "task_name": "Define Config & Access Requirements",
+    "expected_artifact": "Config & Access Requirements Spec",
+    "prompt_mode": "bpmn_plus_standards",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nDefine Config & Access Requirements\n\nExpected output artifact:\nConfig & Access Requirements Spec\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Review PLC vendor docs & specs\nCurrent task: Define Config & Access Requirements\nNext task: Define Network & Protocol Security Requirements\n\nSecurity principles aligned with IEC 62443:\n- identification and authentication control\n- use control\n- restricted engineering access\n- role-based access",
+    "response": "1. The PLC shall enforce unique user accounts with password-based authentication for all local and remote access to conveyor control, configuration, and maintenance functions, with shared or default accounts disabled before commissioning.\n2. The PLC shall implement role-based access control that limits operator, maintenance, and engineering users to only the conveyor system commands and configuration actions required for their assigned duties.\n3. Engineering configuration changes to the PLC logic, safety-related parameters, and communication settings shall be permitted only from explicitly authorized engineering accounts during approved maintenance sessions."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:37:36.762434+00:00",
+    "scenario_id": "plc_req_01_conveyor_access",
+    "task_name": "Define Config & Access Requirements",
+    "expected_artifact": "Config & Access Requirements Spec",
+    "prompt_mode": "bpmn_plus_standards",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nDefine Config & Access Requirements\n\nExpected output artifact:\nConfig & Access Requirements Spec\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Review PLC vendor docs & specs\nCurrent task: Define Config & Access Requirements\nNext task: Define Network & Protocol Security Requirements\n\nSecurity principles aligned with IEC 62443:\n- identification and authentication control\n- use control\n- restricted engineering access\n- role-based access",
+    "response": "1. The PLC system must implement role-based access control to restrict configuration and programming access to authorized personnel with designated roles.\n2. All access to the PLC system must be authenticated using unique identifiers and strong passwords, with a minimum password length of 12 characters.\n3. The PLC system must have an audit trail capability to record and log all configuration changes, access attempts, and engineering activities, with timestamp and user identification."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:37:40.017067+00:00",
+    "scenario_id": "plc_req_01_conveyor_access",
+    "task_name": "Define Config & Access Requirements",
+    "expected_artifact": "Config & Access Requirements Spec",
+    "prompt_mode": "standards_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nDefine Config & Access Requirements\n\nExpected output artifact:\nConfig & Access Requirements Spec\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nSecurity principles aligned with IEC 62443:\n- identification and authentication control\n- use control\n- restricted engineering access\n- role-based access",
+    "response": "1. The PLC and engineering workstation shall enforce unique user IDs with password-based authentication for all local and remote configuration access to the conveyor control system.\n2. The PLC shall implement role-based access control that limits configuration changes to authorized engineering and maintenance roles while permitting operators read-only access to configuration parameters.\n3. Engineering access for PLC logic, network settings, and safety-related conveyor parameters shall be restricted to approved engineering workstations on a dedicated maintenance network segment and disabled when not actively required."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:38:16.178495+00:00",
+    "scenario_id": "plc_req_01_conveyor_access",
+    "task_name": "Define Config & Access Requirements",
+    "expected_artifact": "Config & Access Requirements Spec",
+    "prompt_mode": "standards_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nDefine Config & Access Requirements\n\nExpected output artifact:\nConfig & Access Requirements Spec\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nSecurity principles aligned with IEC 62443:\n- identification and authentication control\n- use control\n- restricted engineering access\n- role-based access",
+    "response": "1. The PLC system must implement role-based access control to restrict configuration changes to authorized engineering personnel with designated roles.\n2. All access to the PLC system for configuration and programming purposes must require multi-factor authentication to ensure secure identification.\n3. The PLC system must enforce restricted engineering access by limiting access to authorized IP addresses and requiring explicit approval for any temporary access exceptions."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:38:20.675243+00:00",
+    "scenario_id": "plc_req_01_conveyor_access",
+    "task_name": "Define Config & Access Requirements",
+    "expected_artifact": "Config & Access Requirements Spec",
+    "prompt_mode": "task_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nDefine Config & Access Requirements\n\nExpected output artifact:\nConfig & Access Requirements Spec\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n",
+    "response": "1. The PLC shall enforce role-based access control with unique named accounts for Operator, Maintenance, Engineer, and Administrator roles, and shall deny anonymous, shared, and default account access to configuration functions.\n2. The PLC shall permit configuration changes only over authenticated and encrypted engineering sessions from an approved workstation allowlist, and shall block configuration writes from HMI, fieldbus, and remote network interfaces not explicitly authorized for engineering access.\n3. The PLC shall record all login attempts, privilege changes, and configuration modifications in a tamper-evident audit log with synchronized timestamps and retain the logs for export to the plant security monitoring system."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:38:22.934808+00:00",
+    "scenario_id": "plc_req_01_conveyor_access",
+    "task_name": "Define Config & Access Requirements",
+    "expected_artifact": "Config & Access Requirements Spec",
+    "prompt_mode": "task_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nDefine Config & Access Requirements\n\nExpected output artifact:\nConfig & Access Requirements Spec\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n",
+    "response": "1. The PLC system must authenticate all users and devices attempting to access or configure the conveyor system controls using unique credentials and role-based access control.\n2. The configuration interface for the PLC system must be restricted to authorized personnel with a minimum of two-factor authentication and encrypted communication protocols.\n3. All changes to the PLC system configuration must be logged and timestamped, with alerts sent to designated personnel in case of unauthorized access or configuration modifications."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:38:26.440758+00:00",
+    "scenario_id": "plc_req_02_conveyor_network",
+    "task_name": "Define Network & Protocol Security Requirements",
+    "expected_artifact": "Network & Protocol Security Requirements",
+    "prompt_mode": "bpmn_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nDefine Network & Protocol Security Requirements\n\nExpected output artifact:\nNetwork & Protocol Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Config & Access Requirements\nCurrent task: Define Network & Protocol Security Requirements\nNext task: Define Patch Management Expectations\n",
+    "response": "1. The PLC and conveyor HMI shall operate on a dedicated industrial control network segmented from enterprise and guest networks by a default-deny firewall permitting only explicitly authorized hosts, ports, and protocols.\n2. All engineering workstation and SCADA communications to the PLC shall use authenticated and encrypted industrial protocols or VPN-secured tunnels, and all unauthenticated or plaintext management services shall be disabled.\n3. The control network shall enforce access control lists and protocol whitelisting so that only approved devices can issue PLC programming, start/stop, or conveyor speed control commands."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:38:35.482455+00:00",
+    "scenario_id": "plc_req_02_conveyor_network",
+    "task_name": "Define Network & Protocol Security Requirements",
+    "expected_artifact": "Network & Protocol Security Requirements",
+    "prompt_mode": "bpmn_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nDefine Network & Protocol Security Requirements\n\nExpected output artifact:\nNetwork & Protocol Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Config & Access Requirements\nCurrent task: Define Network & Protocol Security Requirements\nNext task: Define Patch Management Expectations\n",
+    "response": "1. The industrial PLC system must utilize a secure communication protocol, such as TLS or SSH, to encrypt all network transmissions.\n2. The network architecture must be designed to segregate the PLC system into a isolated VLAN, restricting access to authorized personnel and devices only.\n3. All network protocols used by the PLC system, including Modbus TCP and EtherNet/IP, must be configured to use secure authentication mechanisms, such as username/password or certificate-based authentication."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:38:39.004986+00:00",
+    "scenario_id": "plc_req_02_conveyor_network",
+    "task_name": "Define Network & Protocol Security Requirements",
+    "expected_artifact": "Network & Protocol Security Requirements",
+    "prompt_mode": "bpmn_plus_standards",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nDefine Network & Protocol Security Requirements\n\nExpected output artifact:\nNetwork & Protocol Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Config & Access Requirements\nCurrent task: Define Network & Protocol Security Requirements\nNext task: Define Patch Management Expectations\n\nSecurity principles aligned with IEC 62443:\n- network segmentation\n- secure communication\n- restricted exposed services\n- communication integrity",
+    "response": "1. The PLC shall reside in a dedicated industrial control network segment isolated from enterprise and external networks by firewalls that permit only explicitly authorized conveyor-control communication paths and ports.\n2. All engineering workstation, HMI, and supervisory connections to the PLC shall use authenticated and integrity-protected industrial protocols or protected tunnel mechanisms, and plaintext management protocols shall be disabled.\n3. The PLC and adjacent network devices shall disable or block all unused services, ports, broadcast discovery functions, and protocol commands not required for conveyor operation, diagnostics, or approved maintenance."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:38:43.029032+00:00",
+    "scenario_id": "plc_req_02_conveyor_network",
+    "task_name": "Define Network & Protocol Security Requirements",
+    "expected_artifact": "Network & Protocol Security Requirements",
+    "prompt_mode": "bpmn_plus_standards",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nDefine Network & Protocol Security Requirements\n\nExpected output artifact:\nNetwork & Protocol Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Config & Access Requirements\nCurrent task: Define Network & Protocol Security Requirements\nNext task: Define Patch Management Expectations\n\nSecurity principles aligned with IEC 62443:\n- network segmentation\n- secure communication\n- restricted exposed services\n- communication integrity",
+    "response": "1. The industrial PLC system must implement network segmentation to isolate the automated conveyor system from the rest of the manufacturing network.\n2. All communication protocols used by the PLC system must be securely configured to ensure confidentiality, authenticity, and integrity of data exchanged between devices.\n3. The PLC system must restrict exposed services to only necessary protocols and ports, such as Modbus TCP or EtherNet/IP, and ensure they are properly authenticated and authorized."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:38:46.814803+00:00",
+    "scenario_id": "plc_req_02_conveyor_network",
+    "task_name": "Define Network & Protocol Security Requirements",
+    "expected_artifact": "Network & Protocol Security Requirements",
+    "prompt_mode": "standards_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nDefine Network & Protocol Security Requirements\n\nExpected output artifact:\nNetwork & Protocol Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nSecurity principles aligned with IEC 62443:\n- network segmentation\n- secure communication\n- restricted exposed services\n- communication integrity",
+    "response": "1. The PLC and conveyor control devices shall be placed in a dedicated industrial control network zone segmented from enterprise and external networks by firewalls that permit only explicitly authorized source, destination, port, and protocol flows.\n2. All PLC engineering, HMI, and supervisory communications that support security mechanisms shall use authenticated and integrity-protected protocols, and any legacy industrial protocol lacking these protections shall be restricted to isolated trusted network segments only.\n3. The PLC, switches, and connected control nodes shall disable or block all unused ports, services, and protocols, allowing only required conveyor-system communications verified against an approved communication matrix."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:38:48.518861+00:00",
+    "scenario_id": "plc_req_02_conveyor_network",
+    "task_name": "Define Network & Protocol Security Requirements",
+    "expected_artifact": "Network & Protocol Security Requirements",
+    "prompt_mode": "standards_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nDefine Network & Protocol Security Requirements\n\nExpected output artifact:\nNetwork & Protocol Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nSecurity principles aligned with IEC 62443:\n- network segmentation\n- secure communication\n- restricted exposed services\n- communication integrity",
+    "response": "1. The industrial PLC system must implement network segmentation to isolate the automated conveyor system from the rest of the manufacturing network.\n2. All communication between the PLC and other devices on the network must be encrypted and authenticated to ensure secure communication.\n3. The PLC must only expose necessary services and protocols to the network, such as Modbus TCP, and restrict all other unnecessary services and protocols to prevent unauthorized access."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:38:51.835808+00:00",
+    "scenario_id": "plc_req_02_conveyor_network",
+    "task_name": "Define Network & Protocol Security Requirements",
+    "expected_artifact": "Network & Protocol Security Requirements",
+    "prompt_mode": "task_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nDefine Network & Protocol Security Requirements\n\nExpected output artifact:\nNetwork & Protocol Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n",
+    "response": "1. All PLC engineering, HMI, and supervisory communications on the conveyor control network shall use authenticated and encrypted industrial protocols or be isolated to dedicated physically secured segments when protocol hardening is not supported.\n2. The PLC network shall enforce zone-based segmentation with firewall allowlists so that only explicitly authorized devices and required ports can exchange control traffic between the conveyor cell, HMI, engineering workstation, and plant network.\n3. The PLC and connected network equipment shall reject unauthorized command, configuration, and firmware update messages by requiring device authentication, integrity verification, and protocol-level session control for all write-capable services."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:38:54.760112+00:00",
+    "scenario_id": "plc_req_02_conveyor_network",
+    "task_name": "Define Network & Protocol Security Requirements",
+    "expected_artifact": "Network & Protocol Security Requirements",
+    "prompt_mode": "task_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nDefine Network & Protocol Security Requirements\n\nExpected output artifact:\nNetwork & Protocol Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n",
+    "response": "1. The industrial PLC system must implement secure communication protocols, such as TLS or SSH, to encrypt data transmitted between the PLC and other devices on the network.\n2. The network architecture must be designed to segregate the PLC system from the general corporate network using a demilitarized zone (DMZ) or virtual local area network (VLAN) to limit unauthorized access.\n3. The PLC system must support secure authentication and authorization mechanisms, such as role-based access control (RBAC) or secure password authentication, to ensure only authorized personnel can configure or modify the system."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:38:58.222188+00:00",
+    "scenario_id": "plc_req_03_conveyor_patch",
+    "task_name": "Define Patch Management Expectations",
+    "expected_artifact": "Patch Management Requirements",
+    "prompt_mode": "bpmn_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nDefine Patch Management Expectations\n\nExpected output artifact:\nPatch Management Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Network & Protocol Security Requirements\nCurrent task: Define Patch Management Expectations\nNext task: Consolidate Requirements\n",
+    "response": "1. The PLC and all conveyor-control HMIs, engineering workstations, and networked I/O components shall be included in a documented patch inventory with approved software/firmware baselines and vendor-supported versions.\n2. Security patches and firmware updates for the PLC system shall be risk-assessed and validated in a representative test environment for conveyor logic, safety interlocks, and production communications before deployment to the manufacturing line.\n3. Patch deployment to the conveyor control system shall occur only during approved maintenance windows using rollback-capable procedures and shall apply critical security updates within a defined timeframe based on severity and operational risk."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:39:02.824631+00:00",
+    "scenario_id": "plc_req_03_conveyor_patch",
+    "task_name": "Define Patch Management Expectations",
+    "expected_artifact": "Patch Management Requirements",
+    "prompt_mode": "bpmn_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nDefine Patch Management Expectations\n\nExpected output artifact:\nPatch Management Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Network & Protocol Security Requirements\nCurrent task: Define Patch Management Expectations\nNext task: Consolidate Requirements\n",
+    "response": "1. The patch management process for the industrial PLC system must be able to automatically detect and report missing security patches for the operating system and application software.\n2. All security patches applied to the PLC system must be thoroughly tested in a non-production environment before deployment to the live manufacturing line to prevent unintended disruptions.\n3. The PLC system must have a scheduled maintenance window for applying security patches, with a maximum of 30 days between patch releases and application to ensure timely mitigation of known vulnerabilities."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:39:05.949588+00:00",
+    "scenario_id": "plc_req_03_conveyor_patch",
+    "task_name": "Define Patch Management Expectations",
+    "expected_artifact": "Patch Management Requirements",
+    "prompt_mode": "bpmn_plus_standards",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nDefine Patch Management Expectations\n\nExpected output artifact:\nPatch Management Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Network & Protocol Security Requirements\nCurrent task: Define Patch Management Expectations\nNext task: Consolidate Requirements\n\nSecurity principles aligned with IEC 62443:\n- security update management\n- vulnerability monitoring\n- controlled patch deployment\n- maintenance planning",
+    "response": "1. The PLC patch management process shall maintain an inventory of firmware, operating system, application, and communication module versions for all conveyor control assets and verify vendor patch availability against it at least monthly.\n2. Security vulnerabilities affecting the PLC, engineering workstation, HMI, and network devices on the conveyor control system shall be monitored continuously from vendor and CERT sources and assessed for operational risk within five business days of disclosure.\n3. All approved patches shall be tested on a representative staging environment and deployed during planned maintenance windows using documented rollback procedures that prevent unsafe conveyor operation or unplanned production downtime."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:39:10.856432+00:00",
+    "scenario_id": "plc_req_03_conveyor_patch",
+    "task_name": "Define Patch Management Expectations",
+    "expected_artifact": "Patch Management Requirements",
+    "prompt_mode": "bpmn_plus_standards",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nDefine Patch Management Expectations\n\nExpected output artifact:\nPatch Management Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Network & Protocol Security Requirements\nCurrent task: Define Patch Management Expectations\nNext task: Consolidate Requirements\n\nSecurity principles aligned with IEC 62443:\n- security update management\n- vulnerability monitoring\n- controlled patch deployment\n- maintenance planning",
+    "response": "1. The patch management process for the industrial PLC system must be able to automatically detect and report missing security updates and patches for all system components.\n2. All patches and security updates applied to the PLC system must be thoroughly tested and validated in a controlled environment before deployment to the production environment.\n3. The PLC system must have a scheduled maintenance window for applying security patches and updates, with a maximum of 30 days between patch releases and deployment to ensure timely mitigation of known vulnerabilities."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:39:14.250679+00:00",
+    "scenario_id": "plc_req_03_conveyor_patch",
+    "task_name": "Define Patch Management Expectations",
+    "expected_artifact": "Patch Management Requirements",
+    "prompt_mode": "standards_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nDefine Patch Management Expectations\n\nExpected output artifact:\nPatch Management Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nSecurity principles aligned with IEC 62443:\n- security update management\n- vulnerability monitoring\n- controlled patch deployment\n- maintenance planning",
+    "response": "1. The PLC patch management process shall continuously monitor vendor advisories, SBOM/CVE sources, and operating system or firmware notices for vulnerabilities affecting the conveyor control PLC, its engineering workstation, and connected industrial network components.\n2. All security patches and firmware updates for the conveyor system shall be risk-assessed, tested in a representative offline environment for control logic compatibility and production safety impact, and approved through change management before deployment.\n3. Patch deployment to the PLC environment shall be performed only during planned maintenance windows with rollback procedures, verified backups, and post-update validation of conveyor operation, communications, and safety interlocks."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:39:16.691683+00:00",
+    "scenario_id": "plc_req_03_conveyor_patch",
+    "task_name": "Define Patch Management Expectations",
+    "expected_artifact": "Patch Management Requirements",
+    "prompt_mode": "standards_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nDefine Patch Management Expectations\n\nExpected output artifact:\nPatch Management Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nSecurity principles aligned with IEC 62443:\n- security update management\n- vulnerability monitoring\n- controlled patch deployment\n- maintenance planning",
+    "response": "1. The patch management process for the industrial PLC system must automatically scan for and identify available security updates at least weekly.\n2. All patches applied to the PLC system must be thoroughly tested in a controlled environment before deployment to the production environment to prevent unintended disruptions to the conveyor system.\n3. The PLC system's patch management process must maintain a record of all applied patches, including version numbers, installation dates, and validation results, to facilitate auditing and compliance tracking."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:39:20.697421+00:00",
+    "scenario_id": "plc_req_03_conveyor_patch",
+    "task_name": "Define Patch Management Expectations",
+    "expected_artifact": "Patch Management Requirements",
+    "prompt_mode": "task_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nDefine Patch Management Expectations\n\nExpected output artifact:\nPatch Management Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n",
+    "response": "1. All PLC firmware, HMI software, engineering workstations, and supporting network components on the conveyor control system shall be inventoried and evaluated for security patches at least monthly and within 72 hours of any critical vulnerability disclosure affecting deployed versions.\n2. Security patches shall be validated in a representative test environment for conveyor logic timing, safety interlocks, communications, and production recovery before deployment to the operational PLC system.\n3. Patch deployment to the live conveyor control environment shall occur only during approved maintenance windows using documented rollback procedures, offline backups of PLC programs and configurations, and post-installation verification of normal system operation."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:39:23.017606+00:00",
+    "scenario_id": "plc_req_03_conveyor_patch",
+    "task_name": "Define Patch Management Expectations",
+    "expected_artifact": "Patch Management Requirements",
+    "prompt_mode": "task_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nDefine Patch Management Expectations\n\nExpected output artifact:\nPatch Management Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n",
+    "response": "1. The patch management process for the industrial PLC system must be able to prioritize and apply security patches within 14 days of release for vulnerabilities with a CVSS score of 7 or higher.\n2. All patches applied to the PLC system must be thoroughly tested in a simulated environment to ensure they do not introduce any new functionality or performance issues that could disrupt the automated conveyor system.\n3. The PLC system must maintain a record of all applied patches, including patch version, application date, and validation results, to facilitate auditing and compliance with industry regulations."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:39:26.881785+00:00",
+    "scenario_id": "plc_req_04_robot_access",
+    "task_name": "Define Config & Access Requirements",
+    "expected_artifact": "Config & Access Requirements Spec",
+    "prompt_mode": "bpmn_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nDefine Config & Access Requirements\n\nExpected output artifact:\nConfig & Access Requirements Spec\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Review PLC vendor docs & specs\nCurrent task: Define Config & Access Requirements\nNext task: Define Network & Protocol Security Requirements\n",
+    "response": "1. The PLC shall enforce role-based access control with unique named accounts for operators, maintenance, and engineers, and shall restrict logic edits, safety parameter changes, and firmware updates to explicitly authorized engineering roles only.\n2. The PLC shall disable or remove all default accounts and unused services, require strong passwords for all interactive access, and lock configuration interfaces to approved engineering workstations and physically secured local ports.\n3. The PLC shall generate tamper-resistant audit logs for all login attempts, configuration changes, program downloads, and mode transitions, and shall retain the logs locally and export them to the plant security monitoring system."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:39:29.185558+00:00",
+    "scenario_id": "plc_req_04_robot_access",
+    "task_name": "Define Config & Access Requirements",
+    "expected_artifact": "Config & Access Requirements Spec",
+    "prompt_mode": "bpmn_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nDefine Config & Access Requirements\n\nExpected output artifact:\nConfig & Access Requirements Spec\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Review PLC vendor docs & specs\nCurrent task: Define Config & Access Requirements\nNext task: Define Network & Protocol Security Requirements\n",
+    "response": "1. The PLC system must implement role-based access control to restrict configuration changes to authorized personnel with administrative privileges.\n2. All configuration and access interfaces to the PLC system must use secure communication protocols, such as HTTPS or SSH, to prevent eavesdropping and tampering.\n3. The PLC system must support secure authentication mechanisms, including multi-factor authentication, to ensure that only authorized users can access and modify the system configuration."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:39:32.127850+00:00",
+    "scenario_id": "plc_req_04_robot_access",
+    "task_name": "Define Config & Access Requirements",
+    "expected_artifact": "Config & Access Requirements Spec",
+    "prompt_mode": "bpmn_plus_standards",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nDefine Config & Access Requirements\n\nExpected output artifact:\nConfig & Access Requirements Spec\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Review PLC vendor docs & specs\nCurrent task: Define Config & Access Requirements\nNext task: Define Network & Protocol Security Requirements\n\nSecurity principles aligned with IEC 62443:\n- identification and authentication control\n- use control\n- restricted engineering access\n- role-based access",
+    "response": "1. The PLC and engineering workstation shall enforce unique user accounts with centralized authentication and role-based authorization for operator, maintenance, engineer, and administrator functions.\n2. Engineering access to PLC logic, safety parameters, actuator mappings, and firmware updates shall be restricted to authorized engineering roles through dedicated maintenance interfaces and only when the robotic cell is in a defined safe state.\n3. All configuration changes, login attempts, privilege escalations, and program downloads to the PLC shall be time-stamped, tamper-evidently logged, and retained for audit and incident investigation."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:39:33.703570+00:00",
+    "scenario_id": "plc_req_04_robot_access",
+    "task_name": "Define Config & Access Requirements",
+    "expected_artifact": "Config & Access Requirements Spec",
+    "prompt_mode": "bpmn_plus_standards",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nDefine Config & Access Requirements\n\nExpected output artifact:\nConfig & Access Requirements Spec\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Review PLC vendor docs & specs\nCurrent task: Define Config & Access Requirements\nNext task: Define Network & Protocol Security Requirements\n\nSecurity principles aligned with IEC 62443:\n- identification and authentication control\n- use control\n- restricted engineering access\n- role-based access",
+    "response": "1. The PLC system must implement role-based access control to restrict configuration and programming access to authorized personnel with designated roles.\n2. All users and administrators must be uniquely identified and authenticated before being granted access to the PLC system configuration and programming interfaces.\n3. The PLC system must enforce restricted engineering access by limiting configuration changes to a designated engineering workstation with approved software tools and validated user credentials."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:39:36.848826+00:00",
+    "scenario_id": "plc_req_04_robot_access",
+    "task_name": "Define Config & Access Requirements",
+    "expected_artifact": "Config & Access Requirements Spec",
+    "prompt_mode": "standards_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nDefine Config & Access Requirements\n\nExpected output artifact:\nConfig & Access Requirements Spec\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nSecurity principles aligned with IEC 62443:\n- identification and authentication control\n- use control\n- restricted engineering access\n- role-based access",
+    "response": "1. The PLC and engineering workstation shall enforce unique user accounts with centralized authentication and role-based authorization so that only assigned Operator, Maintenance, and Engineer roles can access configuration functions for the robotic assembly cell.\n2. The PLC shall restrict engineering access to approved maintenance interfaces and trusted engineering stations only, and shall require authenticated service sessions before any logic, parameter, network, or safety-related configuration changes are permitted.\n3. The system shall require that all configuration changes to actuators, sensors, motion sequences, and communication settings are logged with user identity, source station, timestamp, and change details in a tamper-evident audit record."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:39:39.724023+00:00",
+    "scenario_id": "plc_req_04_robot_access",
+    "task_name": "Define Config & Access Requirements",
+    "expected_artifact": "Config & Access Requirements Spec",
+    "prompt_mode": "standards_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nDefine Config & Access Requirements\n\nExpected output artifact:\nConfig & Access Requirements Spec\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nSecurity principles aligned with IEC 62443:\n- identification and authentication control\n- use control\n- restricted engineering access\n- role-based access",
+    "response": "1. The PLC system must implement role-based access control to restrict configuration changes to authorized engineering personnel with designated roles.\n2. All access to the PLC system for configuration and programming purposes must require multi-factor authentication to ensure secure identification.\n3. The PLC system must enforce restricted engineering access by limiting the use of programming and configuration tools to specifically designated engineering workstations."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:39:43.223783+00:00",
+    "scenario_id": "plc_req_04_robot_access",
+    "task_name": "Define Config & Access Requirements",
+    "expected_artifact": "Config & Access Requirements Spec",
+    "prompt_mode": "task_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nDefine Config & Access Requirements\n\nExpected output artifact:\nConfig & Access Requirements Spec\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n",
+    "response": "1. The PLC and engineering workstation shall enforce role-based access control with unique user accounts, least-privilege permissions, and multi-factor authentication for any configuration change, logic download, or mode transition affecting the robotic assembly cell.\n2. The PLC shall permit configuration and maintenance access only over explicitly enabled, authenticated industrial protocols from an approved allowlist of engineering hosts and segmented maintenance networks, with all unused services, ports, and default accounts disabled.\n3. The system shall generate tamper-resistant audit logs for all configuration access, parameter changes, firmware updates, and safety interlock modifications, including user identity, source device, timestamp, and before/after values, and shall retain these logs for forensic review."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:39:44.963543+00:00",
+    "scenario_id": "plc_req_04_robot_access",
+    "task_name": "Define Config & Access Requirements",
+    "expected_artifact": "Config & Access Requirements Spec",
+    "prompt_mode": "task_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nDefine Config & Access Requirements\n\nExpected output artifact:\nConfig & Access Requirements Spec\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n",
+    "response": "1. The PLC system must implement role-based access control to restrict configuration changes to authorized personnel with administrative privileges.\n2. All configuration data transmitted to or from the PLC must be encrypted using a secure protocol, such as TLS or SSH.\n3. The PLC system must maintain an audit log of all configuration changes, including the date, time, user, and description of each change, to facilitate security monitoring and incident response."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:39:47.933200+00:00",
+    "scenario_id": "plc_req_05_robot_network",
+    "task_name": "Define Network & Protocol Security Requirements",
+    "expected_artifact": "Network & Protocol Security Requirements",
+    "prompt_mode": "bpmn_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nDefine Network & Protocol Security Requirements\n\nExpected output artifact:\nNetwork & Protocol Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Config & Access Requirements\nCurrent task: Define Network & Protocol Security Requirements\nNext task: Define Patch Management Expectations\n",
+    "response": "1. The PLC network architecture shall segment the robotic assembly cell into dedicated zones with industrial firewalls enforcing allowlisted communications only between the PLC, HMIs, engineering workstations, safety controllers, and actuator or sensor networks.\n2. All PLC programming, configuration, and supervisory communications shall use authenticated and encrypted industrial protocols or secured tunnels, and all insecure services and unused protocol ports shall be disabled by default.\n3. The PLC and connected industrial devices shall reject unauthorized command, firmware, and logic download traffic by enforcing mutual device authentication and command authorization on all control network interfaces."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:39:52.044251+00:00",
+    "scenario_id": "plc_req_05_robot_network",
+    "task_name": "Define Network & Protocol Security Requirements",
+    "expected_artifact": "Network & Protocol Security Requirements",
+    "prompt_mode": "bpmn_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nDefine Network & Protocol Security Requirements\n\nExpected output artifact:\nNetwork & Protocol Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Config & Access Requirements\nCurrent task: Define Network & Protocol Security Requirements\nNext task: Define Patch Management Expectations\n",
+    "response": "1. The industrial PLC system must implement secure communication protocols, such as TLS or SSH, to encrypt data transmitted between the PLC and other devices on the network.\n2. The network architecture must be designed to segregate the robotic assembly cell's control network from the enterprise network using firewalls or VLANs to prevent unauthorized access.\n3. The PLC system must be configured to use secure authentication mechanisms, such as username/password or certificate-based authentication, to verify the identity of devices and users attempting to access the system."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:39:54.816049+00:00",
+    "scenario_id": "plc_req_05_robot_network",
+    "task_name": "Define Network & Protocol Security Requirements",
+    "expected_artifact": "Network & Protocol Security Requirements",
+    "prompt_mode": "bpmn_plus_standards",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nDefine Network & Protocol Security Requirements\n\nExpected output artifact:\nNetwork & Protocol Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Config & Access Requirements\nCurrent task: Define Network & Protocol Security Requirements\nNext task: Define Patch Management Expectations\n\nSecurity principles aligned with IEC 62443:\n- network segmentation\n- secure communication\n- restricted exposed services\n- communication integrity",
+    "response": "1. The PLC network shall be segmented into dedicated security zones with only explicitly authorized conduits permitting traffic between the robotic assembly cell, engineering workstations, HMIs, and external networks.\n2. All PLC command, control, and configuration communications shall use authenticated and integrity-protected industrial protocols or protected tunnels that prevent spoofing, tampering, and unauthorized message injection.\n3. The PLC and connected cell devices shall expose only required ports, protocols, and services, and all unused or insecure legacy services shall be disabled or blocked by default."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:39:56.764243+00:00",
+    "scenario_id": "plc_req_05_robot_network",
+    "task_name": "Define Network & Protocol Security Requirements",
+    "expected_artifact": "Network & Protocol Security Requirements",
+    "prompt_mode": "bpmn_plus_standards",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nDefine Network & Protocol Security Requirements\n\nExpected output artifact:\nNetwork & Protocol Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Config & Access Requirements\nCurrent task: Define Network & Protocol Security Requirements\nNext task: Define Patch Management Expectations\n\nSecurity principles aligned with IEC 62443:\n- network segmentation\n- secure communication\n- restricted exposed services\n- communication integrity",
+    "response": "1. The industrial PLC system must implement network segmentation to isolate the robotic assembly cell's control network from the general plant network.\n2. All communication between the PLC and actuators/sensors must be encrypted using a secure protocol, such as TLS or SSH, to ensure confidentiality and integrity.\n3. The PLC system must restrict exposed services to only necessary protocols, such as Modbus TCP or OPC UA, and configure them to use secure authentication and authorization mechanisms."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:39:59.817976+00:00",
+    "scenario_id": "plc_req_05_robot_network",
+    "task_name": "Define Network & Protocol Security Requirements",
+    "expected_artifact": "Network & Protocol Security Requirements",
+    "prompt_mode": "standards_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nDefine Network & Protocol Security Requirements\n\nExpected output artifact:\nNetwork & Protocol Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nSecurity principles aligned with IEC 62443:\n- network segmentation\n- secure communication\n- restricted exposed services\n- communication integrity",
+    "response": "1. The PLC and all robotic cell devices shall reside in a dedicated industrial control network segment isolated from enterprise and external networks by firewalls that permit only explicitly approved control, safety, and engineering traffic.\n2. All Ethernet-based PLC communications used for control, monitoring, and engineering access shall use authenticated and integrity-protected protocols, and any protocol lacking these protections shall be confined to physically isolated trusted segments.\n3. The PLC, HMI, robot controller, and remote I/O shall expose only required services and ports, with unused protocols, broadcast discovery services, and vendor default remote access disabled by configuration."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:40:01.391662+00:00",
+    "scenario_id": "plc_req_05_robot_network",
+    "task_name": "Define Network & Protocol Security Requirements",
+    "expected_artifact": "Network & Protocol Security Requirements",
+    "prompt_mode": "standards_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nDefine Network & Protocol Security Requirements\n\nExpected output artifact:\nNetwork & Protocol Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nSecurity principles aligned with IEC 62443:\n- network segmentation\n- secure communication\n- restricted exposed services\n- communication integrity",
+    "response": "1. The industrial PLC system must implement network segmentation to isolate the robotic assembly cell's control network from the overall plant network.\n2. All communication between the PLC and actuators/sensors must be encrypted and authenticated to ensure secure communication.\n3. The PLC system must restrict exposed services to only necessary protocols, such as Modbus TCP or EtherNet/IP, and ensure communication integrity through checksums or digital signatures."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:40:05.715958+00:00",
+    "scenario_id": "plc_req_05_robot_network",
+    "task_name": "Define Network & Protocol Security Requirements",
+    "expected_artifact": "Network & Protocol Security Requirements",
+    "prompt_mode": "task_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nDefine Network & Protocol Security Requirements\n\nExpected output artifact:\nNetwork & Protocol Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n",
+    "response": "1. The PLC network shall be segmented from enterprise and non-control networks using industrial firewalls with default-deny rules, permitting only explicitly authorized engineering workstation, HMI, safety controller, and robot controller communications on required ports and protocols.\n2. All PLC programming, configuration, and supervisory communications shall use authenticated and integrity-protected protocols, with plaintext industrial services disabled unless a documented technical constraint requires compensating network isolation controls.\n3. The PLC and connected robotic cell devices shall reject unauthorized command sources by enforcing endpoint allowlisting and role-based access for protocol sessions, including explicit restrictions on write, mode-change, firmware update, and remote stop/start functions."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:40:07.518523+00:00",
+    "scenario_id": "plc_req_05_robot_network",
+    "task_name": "Define Network & Protocol Security Requirements",
+    "expected_artifact": "Network & Protocol Security Requirements",
+    "prompt_mode": "task_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nDefine Network & Protocol Security Requirements\n\nExpected output artifact:\nNetwork & Protocol Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n",
+    "response": "1. The industrial PLC system must implement secure communication protocols, such as TLS or SSH, to encrypt data transmitted between the PLC and external devices.\n2. All network connections to the PLC must be authenticated using a secure authentication mechanism, such as username/password or certificate-based authentication, to prevent unauthorized access.\n3. The PLC system must be configured to only allow incoming connections from authorized IP addresses and ports, using a firewall or access control list, to prevent malicious traffic from reaching the system."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:40:12.641010+00:00",
+    "scenario_id": "plc_req_06_robot_patch",
+    "task_name": "Define Patch Management Expectations",
+    "expected_artifact": "Patch Management Requirements",
+    "prompt_mode": "bpmn_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nDefine Patch Management Expectations\n\nExpected output artifact:\nPatch Management Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Network & Protocol Security Requirements\nCurrent task: Define Patch Management Expectations\nNext task: Consolidate Requirements\n",
+    "response": "1. The PLC system shall apply vendor-authenticated patches and firmware updates only after validation in a representative test environment confirming no adverse effects on robotic cell safety functions, timing, communications, or actuator/sensor control logic.\n2. The patch management process shall define risk-based deployment windows, rollback procedures, and maximum remediation times for security updates affecting the PLC, engineering workstation, HMI, industrial network devices, and third-party cell components.\n3. The PLC system shall maintain an auditable patch inventory and update status for all hardware and software assets in the assembly cell, including version baselines, approval records, deployment dates, and exceptions for deferred patches."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:40:15.193913+00:00",
+    "scenario_id": "plc_req_06_robot_patch",
+    "task_name": "Define Patch Management Expectations",
+    "expected_artifact": "Patch Management Requirements",
+    "prompt_mode": "bpmn_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nDefine Patch Management Expectations\n\nExpected output artifact:\nPatch Management Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Network & Protocol Security Requirements\nCurrent task: Define Patch Management Expectations\nNext task: Consolidate Requirements\n",
+    "response": "1. The patch management process for the industrial PLC system must be able to prioritize and apply security patches within 24 hours of release for critical vulnerabilities.\n2. All patches applied to the PLC system must be thoroughly tested in a simulated environment to ensure they do not introduce new vulnerabilities or disrupt the robotic assembly cell's operation.\n3. The PLC system must maintain a detailed patch history, including version numbers, installation dates, and validation results, to facilitate auditing and compliance with industry regulations."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:40:18.425797+00:00",
+    "scenario_id": "plc_req_06_robot_patch",
+    "task_name": "Define Patch Management Expectations",
+    "expected_artifact": "Patch Management Requirements",
+    "prompt_mode": "bpmn_plus_standards",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nDefine Patch Management Expectations\n\nExpected output artifact:\nPatch Management Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Network & Protocol Security Requirements\nCurrent task: Define Patch Management Expectations\nNext task: Consolidate Requirements\n\nSecurity principles aligned with IEC 62443:\n- security update management\n- vulnerability monitoring\n- controlled patch deployment\n- maintenance planning",
+    "response": "1. The PLC system shall maintain an approved patch baseline for controller firmware, HMI/engineering workstations, robot controllers, and networked I/O devices, with vendor security advisories monitored at least monthly for relevant vulnerabilities.\n2. All security patches and firmware updates shall be tested offline in a representative robotic cell environment and formally approved before deployment to production controllers or supporting systems.\n3. Patch deployment to the assembly cell shall occur only during planned maintenance windows with documented rollback procedures and verification that the PLC returns to a safe operational state after update."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:40:20.442699+00:00",
+    "scenario_id": "plc_req_06_robot_patch",
+    "task_name": "Define Patch Management Expectations",
+    "expected_artifact": "Patch Management Requirements",
+    "prompt_mode": "bpmn_plus_standards",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nDefine Patch Management Expectations\n\nExpected output artifact:\nPatch Management Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Network & Protocol Security Requirements\nCurrent task: Define Patch Management Expectations\nNext task: Consolidate Requirements\n\nSecurity principles aligned with IEC 62443:\n- security update management\n- vulnerability monitoring\n- controlled patch deployment\n- maintenance planning",
+    "response": "1. The patch management system must be able to automatically scan the industrial PLC system for vulnerabilities and identify required security updates.\n2. All patches and security updates must be thoroughly tested in a controlled environment before deployment to the robotic assembly cell to prevent unintended disruptions.\n3. The patch management process must include a scheduled maintenance window to apply security updates and patches to the industrial PLC system, ensuring minimal downtime and no impact on production."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:40:24.164131+00:00",
+    "scenario_id": "plc_req_06_robot_patch",
+    "task_name": "Define Patch Management Expectations",
+    "expected_artifact": "Patch Management Requirements",
+    "prompt_mode": "standards_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nDefine Patch Management Expectations\n\nExpected output artifact:\nPatch Management Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nSecurity principles aligned with IEC 62443:\n- security update management\n- vulnerability monitoring\n- controlled patch deployment\n- maintenance planning",
+    "response": "1. The PLC patch management process shall monitor vendor advisories, ICS-CERT notices, and component vulnerability disclosures for the robotic assembly cell PLC, HMI, network modules, and engineering workstation at least weekly and document applicability within 5 business days.\n2. All security patches and firmware updates for the PLC system shall be validated in an offline test environment representative of the robotic assembly cell and approved through change control before deployment to production.\n3. Patch deployment to the production PLC system shall be performed only during planned maintenance windows with defined rollback procedures, verified backups of logic and configuration, and post-update functional checks of actuators, sensors, and safety interlocks."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:40:26.358026+00:00",
+    "scenario_id": "plc_req_06_robot_patch",
+    "task_name": "Define Patch Management Expectations",
+    "expected_artifact": "Patch Management Requirements",
+    "prompt_mode": "standards_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nDefine Patch Management Expectations\n\nExpected output artifact:\nPatch Management Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nSecurity principles aligned with IEC 62443:\n- security update management\n- vulnerability monitoring\n- controlled patch deployment\n- maintenance planning",
+    "response": "1. The patch management process for the industrial PLC system must be able to automatically detect and report newly released security updates from vendors within 24 hours of release.\n2. All patches applied to the PLC system must be thoroughly tested in a controlled environment to ensure they do not introduce new vulnerabilities or disrupt the functionality of the robotic assembly cell.\n3. The PLC system must have a scheduled maintenance window at least every 6 weeks to apply security patches, with a maximum downtime of 2 hours to minimize impact on production operations."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:40:29.427657+00:00",
+    "scenario_id": "plc_req_06_robot_patch",
+    "task_name": "Define Patch Management Expectations",
+    "expected_artifact": "Patch Management Requirements",
+    "prompt_mode": "task_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nDefine Patch Management Expectations\n\nExpected output artifact:\nPatch Management Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n",
+    "response": "1. The PLC patch management process shall validate all firmware, logic runtime, HMI, and network component patches in an offline test environment that replicates the robotic assembly cell’s actuators, sensors, fieldbus communications, and safety interlocks before production deployment.\n2. The system shall deploy patches only during approved maintenance windows with the cell placed in a verified safe state, including controlled actuator de-energization or hold position and confirmation that rollback procedures are available and tested.\n3. The patch management process shall require cryptographic verification of patch authenticity and integrity, maintain versioned patch and rollback records for each PLC and associated industrial device, and generate audit logs for patch approval, installation, and outcome."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:40:31.803462+00:00",
+    "scenario_id": "plc_req_06_robot_patch",
+    "task_name": "Define Patch Management Expectations",
+    "expected_artifact": "Patch Management Requirements",
+    "prompt_mode": "task_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nDefine Patch Management Expectations\n\nExpected output artifact:\nPatch Management Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n",
+    "response": "1. The patch management process for the industrial PLC system must be able to prioritize and apply security patches within 24 hours of release for critical vulnerabilities.\n2. All patches applied to the PLC system must be thoroughly tested in a simulated environment to ensure they do not introduce any new faults or affect the functionality of the robotic assembly cell.\n3. The PLC system must maintain a detailed patch history, including version numbers, installation dates, and validation results, to facilitate auditing and compliance with industry regulations."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:40:35.014519+00:00",
+    "scenario_id": "plc_req_07_packaging_access",
+    "task_name": "Define Config & Access Requirements",
+    "expected_artifact": "Config & Access Requirements Spec",
+    "prompt_mode": "bpmn_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nDefine Config & Access Requirements\n\nExpected output artifact:\nConfig & Access Requirements Spec\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Review PLC vendor docs & specs\nCurrent task: Define Config & Access Requirements\nNext task: Define Network & Protocol Security Requirements\n",
+    "response": "1. The PLC shall enforce role-based access control with unique named accounts for Operator, Maintenance, Engineer, and Administrator roles, granting write access to control logic, motion parameters, and label recipes only to authorized roles.\n2. The PLC and engineering workstation shall require multi-factor authentication for all engineering and administrative sessions and shall disable or remove all default, shared, and vendor-supplied credentials before commissioning.\n3. The PLC shall permit configuration and program changes only through an approved engineering workstation on a maintenance access path, with all login attempts, mode changes, recipe edits, and logic downloads time-stamped and retained in tamper-evident audit logs."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:40:37.667997+00:00",
+    "scenario_id": "plc_req_07_packaging_access",
+    "task_name": "Define Config & Access Requirements",
+    "expected_artifact": "Config & Access Requirements Spec",
+    "prompt_mode": "bpmn_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nDefine Config & Access Requirements\n\nExpected output artifact:\nConfig & Access Requirements Spec\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Review PLC vendor docs & specs\nCurrent task: Define Config & Access Requirements\nNext task: Define Network & Protocol Security Requirements\n",
+    "response": "1. The PLC system must be configured to restrict access to authorized personnel with role-based authentication and authorization mechanisms.\n2. All configuration changes to the PLC system must be logged and timestamped, with alerts sent to designated administrators for review and approval.\n3. The PLC system must support secure communication protocols, such as HTTPS or SFTP, for remote access and configuration updates to prevent unauthorized data interception or modification."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:40:41.287856+00:00",
+    "scenario_id": "plc_req_07_packaging_access",
+    "task_name": "Define Config & Access Requirements",
+    "expected_artifact": "Config & Access Requirements Spec",
+    "prompt_mode": "bpmn_plus_standards",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nDefine Config & Access Requirements\n\nExpected output artifact:\nConfig & Access Requirements Spec\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Review PLC vendor docs & specs\nCurrent task: Define Config & Access Requirements\nNext task: Define Network & Protocol Security Requirements\n\nSecurity principles aligned with IEC 62443:\n- identification and authentication control\n- use control\n- restricted engineering access\n- role-based access",
+    "response": "1. The PLC and HMI shall enforce unique named accounts with password-based authentication for all operators, maintenance technicians, and engineers, and shall disable shared or default credentials before commissioning the packaging line.\n2. The control system shall implement role-based access control that limits operators to conveyor and labeling operations, permits maintenance to diagnostics and approved parameter changes, and restricts PLC program upload, download, and logic modification to authorized engineering roles only.\n3. Engineering access to the PLC configuration shall be permitted only from explicitly approved engineering workstations during maintenance windows and shall be logged with user identity, timestamp, and configuration change details."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:40:43.320411+00:00",
+    "scenario_id": "plc_req_07_packaging_access",
+    "task_name": "Define Config & Access Requirements",
+    "expected_artifact": "Config & Access Requirements Spec",
+    "prompt_mode": "bpmn_plus_standards",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nDefine Config & Access Requirements\n\nExpected output artifact:\nConfig & Access Requirements Spec\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Review PLC vendor docs & specs\nCurrent task: Define Config & Access Requirements\nNext task: Define Network & Protocol Security Requirements\n\nSecurity principles aligned with IEC 62443:\n- identification and authentication control\n- use control\n- restricted engineering access\n- role-based access",
+    "response": "1. The PLC system must implement role-based access control to restrict configuration and operational changes to authorized personnel with designated roles.\n2. All access to the PLC system must be authenticated using unique identifiers and passwords, with a minimum password length of 12 characters and multi-factor authentication for remote access.\n3. The PLC system must have an audit trail capability to record and log all configuration changes, access attempts, and operational events, with a minimum retention period of 90 days."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:40:46.321449+00:00",
+    "scenario_id": "plc_req_07_packaging_access",
+    "task_name": "Define Config & Access Requirements",
+    "expected_artifact": "Config & Access Requirements Spec",
+    "prompt_mode": "standards_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nDefine Config & Access Requirements\n\nExpected output artifact:\nConfig & Access Requirements Spec\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nSecurity principles aligned with IEC 62443:\n- identification and authentication control\n- use control\n- restricted engineering access\n- role-based access",
+    "response": "1. The PLC and engineering workstation shall enforce unique user accounts with role-based authentication for Operator, Maintenance, Engineer, and Administrator functions, and shall prohibit shared or default credentials.\n2. The PLC shall restrict configuration changes, logic downloads, force operations, and labeling parameter modifications to authenticated Engineer or Administrator roles only, while Operators are limited to runtime control and status monitoring.\n3. Engineering access to the packaging line PLC shall be permitted only from approved engineering workstations on a dedicated maintenance network segment and shall be disabled or session-locked when not actively authorized for maintenance."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:40:48.754544+00:00",
+    "scenario_id": "plc_req_07_packaging_access",
+    "task_name": "Define Config & Access Requirements",
+    "expected_artifact": "Config & Access Requirements Spec",
+    "prompt_mode": "standards_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nDefine Config & Access Requirements\n\nExpected output artifact:\nConfig & Access Requirements Spec\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nSecurity principles aligned with IEC 62443:\n- identification and authentication control\n- use control\n- restricted engineering access\n- role-based access",
+    "response": "1. The system shall implement role-based access control to restrict configuration changes to authorized personnel with designated engineering roles.\n2. All access to the PLC system for configuration and programming purposes shall require multi-factor authentication to ensure only authorized users can make changes.\n3. The system shall enforce restricted engineering access by limiting the availability of configuration interfaces and tools to specific, designated workstations or terminals."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:40:51.578337+00:00",
+    "scenario_id": "plc_req_07_packaging_access",
+    "task_name": "Define Config & Access Requirements",
+    "expected_artifact": "Config & Access Requirements Spec",
+    "prompt_mode": "task_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nDefine Config & Access Requirements\n\nExpected output artifact:\nConfig & Access Requirements Spec\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n",
+    "response": "1. The PLC and engineering workstation shall enforce role-based access control with unique named accounts and multifactor authentication for any logic download, configuration change, or remote maintenance session on the packaging line.\n2. The PLC configuration shall permit network access only from an approved allowlist of engineering and HMI hosts on designated industrial protocol ports, with all other inbound and remote connections denied by default.\n3. The system shall maintain tamper-evident audit logs of all login attempts, mode changes, program downloads, parameter modifications, and firmware updates, time-synchronized and retained for at least 180 days."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:40:53.673673+00:00",
+    "scenario_id": "plc_req_07_packaging_access",
+    "task_name": "Define Config & Access Requirements",
+    "expected_artifact": "Config & Access Requirements Spec",
+    "prompt_mode": "task_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nDefine Config & Access Requirements\n\nExpected output artifact:\nConfig & Access Requirements Spec\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n",
+    "response": "1. The PLC system must authenticate and authorize all users and devices before granting access to configuration and control functions.\n2. The system must implement role-based access control to restrict configuration changes to authorized personnel with designated engineering or maintenance roles.\n3. All configuration changes to the PLC system must be logged and timestamped, with audit trails stored securely for a minimum of 12 months."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:40:56.826533+00:00",
+    "scenario_id": "plc_req_08_packaging_network",
+    "task_name": "Define Network & Protocol Security Requirements",
+    "expected_artifact": "Network & Protocol Security Requirements",
+    "prompt_mode": "bpmn_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nDefine Network & Protocol Security Requirements\n\nExpected output artifact:\nNetwork & Protocol Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Config & Access Requirements\nCurrent task: Define Network & Protocol Security Requirements\nNext task: Define Patch Management Expectations\n",
+    "response": "1. The PLC network shall be segmented from enterprise and external networks using industrial firewalls, with only explicitly whitelisted communications permitted between HMIs, engineering workstations, conveyors, sensors, labeling units, and the PLC.\n2. All PLC programming, supervisory, and maintenance protocols shall enforce mutual authentication, role-based authorization, and cryptographic protection in transit, or be isolated within a dedicated control-zone conduit if the protocol does not support these controls.\n3. The control network shall implement protocol-aware monitoring and rate limiting to detect and block unauthorized commands, malformed packets, broadcast storms, and scan traffic that could disrupt packaging line operations."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:40:58.543272+00:00",
+    "scenario_id": "plc_req_08_packaging_network",
+    "task_name": "Define Network & Protocol Security Requirements",
+    "expected_artifact": "Network & Protocol Security Requirements",
+    "prompt_mode": "bpmn_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nDefine Network & Protocol Security Requirements\n\nExpected output artifact:\nNetwork & Protocol Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Config & Access Requirements\nCurrent task: Define Network & Protocol Security Requirements\nNext task: Define Patch Management Expectations\n",
+    "response": "1. The industrial PLC system must implement secure communication protocols, such as TLS or SSH, to encrypt data transmitted between devices and prevent eavesdropping or tampering.\n2. All network connections to the PLC system must be restricted to authorized IP addresses and ports, using firewall rules and access control lists to prevent unauthorized access.\n3. The PLC system must support secure authentication and authorization mechanisms, such as username/password or certificate-based authentication, to ensure that only authorized personnel can access and control the system."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:41:01.462056+00:00",
+    "scenario_id": "plc_req_08_packaging_network",
+    "task_name": "Define Network & Protocol Security Requirements",
+    "expected_artifact": "Network & Protocol Security Requirements",
+    "prompt_mode": "bpmn_plus_standards",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nDefine Network & Protocol Security Requirements\n\nExpected output artifact:\nNetwork & Protocol Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Config & Access Requirements\nCurrent task: Define Network & Protocol Security Requirements\nNext task: Define Patch Management Expectations\n\nSecurity principles aligned with IEC 62443:\n- network segmentation\n- secure communication\n- restricted exposed services\n- communication integrity",
+    "response": "1. The PLC, HMIs, labeling units, and supervisory systems shall be placed in separate industrial network zones with only explicitly authorized conduit traffic between zones for required packaging line control functions.\n2. All PLC communications that support configuration, monitoring, or control shall use authenticated and integrity-protected industrial protocols or compensating secure tunnels where native protocol security is unavailable.\n3. The PLC and connected packaging line devices shall expose only required ports, services, and protocol functions, with all unused services, broadcast discovery mechanisms, and unrestricted remote access disabled."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:41:03.728610+00:00",
+    "scenario_id": "plc_req_08_packaging_network",
+    "task_name": "Define Network & Protocol Security Requirements",
+    "expected_artifact": "Network & Protocol Security Requirements",
+    "prompt_mode": "bpmn_plus_standards",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nDefine Network & Protocol Security Requirements\n\nExpected output artifact:\nNetwork & Protocol Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Config & Access Requirements\nCurrent task: Define Network & Protocol Security Requirements\nNext task: Define Patch Management Expectations\n\nSecurity principles aligned with IEC 62443:\n- network segmentation\n- secure communication\n- restricted exposed services\n- communication integrity",
+    "response": "1. The industrial PLC system must implement network segmentation to isolate the packaging line's control network from the enterprise network and other non-essential systems.\n2. All communication between devices on the packaging line, including sensors and labeling units, must be encrypted and authenticated using secure protocols such as TLS or IPSec.\n3. The PLC system must restrict exposed services to only necessary protocols and ports, such as Modbus TCP or EtherNet/IP, and ensure that all communication is validated and verified to maintain communication integrity."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:41:06.949329+00:00",
+    "scenario_id": "plc_req_08_packaging_network",
+    "task_name": "Define Network & Protocol Security Requirements",
+    "expected_artifact": "Network & Protocol Security Requirements",
+    "prompt_mode": "standards_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nDefine Network & Protocol Security Requirements\n\nExpected output artifact:\nNetwork & Protocol Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nSecurity principles aligned with IEC 62443:\n- network segmentation\n- secure communication\n- restricted exposed services\n- communication integrity",
+    "response": "1. The PLC network shall be segmented from enterprise and non-control networks using industrial firewalls, with only explicitly allowlisted communications between HMIs, sensors, labeling units, and supervisory systems required for the packaging line operation.\n2. All Ethernet-based control and monitoring communications to and from the PLC shall use authenticated and integrity-protected industrial protocols or secure tunneling mechanisms that prevent unauthorized command injection and message tampering.\n3. The PLC and connected packaging line devices shall expose only required services and protocol ports, with all unused services, programming interfaces, and remote management access disabled or blocked by default."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:41:09.412578+00:00",
+    "scenario_id": "plc_req_08_packaging_network",
+    "task_name": "Define Network & Protocol Security Requirements",
+    "expected_artifact": "Network & Protocol Security Requirements",
+    "prompt_mode": "standards_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nDefine Network & Protocol Security Requirements\n\nExpected output artifact:\nNetwork & Protocol Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nSecurity principles aligned with IEC 62443:\n- network segmentation\n- secure communication\n- restricted exposed services\n- communication integrity",
+    "response": "1. The industrial PLC system must implement network segmentation to isolate the packaging line's control network from the enterprise network and other non-essential systems.\n2. All communication between the PLC, sensors, and labeling units must be encrypted and authenticated using secure protocols such as TLS or SSH.\n3. The PLC system must restrict exposed services to only necessary protocols, such as Modbus TCP or EtherNet/IP, and ensure that all communication is validated for integrity and authenticity."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:41:13.400266+00:00",
+    "scenario_id": "plc_req_08_packaging_network",
+    "task_name": "Define Network & Protocol Security Requirements",
+    "expected_artifact": "Network & Protocol Security Requirements",
+    "prompt_mode": "task_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nDefine Network & Protocol Security Requirements\n\nExpected output artifact:\nNetwork & Protocol Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n",
+    "response": "1. All PLC, HMI, SCADA, and engineering workstation communications on the packaging line network shall use authenticated and integrity-protected industrial protocols, and any device or protocol that cannot support these controls shall be isolated within a dedicated restricted control VLAN.\n2. The PLC shall accept programming, configuration, and control commands only from explicitly allowlisted engineering and supervisory hosts over designated ports, with all other inbound and lateral traffic between conveyor, sensor, and labeling cell segments denied by default.\n3. Network infrastructure supporting the packaging line shall generate time-synchronized logs and alerts for unauthorized protocol use, failed authentication, unexpected device additions, and changes to PLC communication paths or switch port assignments."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:41:17.305185+00:00",
+    "scenario_id": "plc_req_08_packaging_network",
+    "task_name": "Define Network & Protocol Security Requirements",
+    "expected_artifact": "Network & Protocol Security Requirements",
+    "prompt_mode": "task_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nDefine Network & Protocol Security Requirements\n\nExpected output artifact:\nNetwork & Protocol Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n",
+    "response": "1. The industrial PLC system must implement secure communication protocols, such as TLS or SSH, to encrypt data transmitted between the PLC and other devices on the network.\n2. All network connections to the PLC must be authenticated using secure authentication protocols, such as username/password or certificate-based authentication, to prevent unauthorized access.\n3. The PLC system must be configured to only allow necessary network traffic, using techniques such as firewall rules or access control lists, to prevent malicious traffic from reaching the PLC or connected devices."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:41:20.081564+00:00",
+    "scenario_id": "plc_req_09_packaging_patch",
+    "task_name": "Define Patch Management Expectations",
+    "expected_artifact": "Patch Management Requirements",
+    "prompt_mode": "bpmn_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nDefine Patch Management Expectations\n\nExpected output artifact:\nPatch Management Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Network & Protocol Security Requirements\nCurrent task: Define Patch Management Expectations\nNext task: Consolidate Requirements\n",
+    "response": "1. The PLC, HMI, sensor interface modules, and labeling unit controllers shall support authenticated patch packages with vendor signature verification and integrity checking before installation.\n2. Security patches for the packaging line control environment shall be tested in a representative offline setup for conveyor motion, sensor timing, and label application functions before deployment to production.\n3. Patch deployment to the industrial control system shall be performed only during approved maintenance windows with documented rollback procedures to restore the PLC and connected devices if operational faults occur."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:41:22.733611+00:00",
+    "scenario_id": "plc_req_09_packaging_patch",
+    "task_name": "Define Patch Management Expectations",
+    "expected_artifact": "Patch Management Requirements",
+    "prompt_mode": "bpmn_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nDefine Patch Management Expectations\n\nExpected output artifact:\nPatch Management Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Network & Protocol Security Requirements\nCurrent task: Define Patch Management Expectations\nNext task: Consolidate Requirements\n",
+    "response": "1. The patch management process for the industrial PLC system must be able to prioritize and apply security patches within 14 days of release for vulnerabilities with a CVSS score of 7 or higher.\n2. All patches applied to the PLC system must be thoroughly tested in a simulated environment to ensure they do not introduce any new vulnerabilities or disrupt the functionality of the conveyor belts, sensors, and labeling units.\n3. The patch management system must maintain a record of all applied patches, including version numbers, installation dates, and validation results, and provide automated reporting to the system administrators on a monthly basis."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:41:25.882360+00:00",
+    "scenario_id": "plc_req_09_packaging_patch",
+    "task_name": "Define Patch Management Expectations",
+    "expected_artifact": "Patch Management Requirements",
+    "prompt_mode": "bpmn_plus_standards",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nDefine Patch Management Expectations\n\nExpected output artifact:\nPatch Management Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Network & Protocol Security Requirements\nCurrent task: Define Patch Management Expectations\nNext task: Consolidate Requirements\n\nSecurity principles aligned with IEC 62443:\n- security update management\n- vulnerability monitoring\n- controlled patch deployment\n- maintenance planning",
+    "response": "1. The PLC, HMI, engineering workstation, conveyor drive controllers, and labeling unit controllers shall be included in a documented patch inventory with approved firmware/software versions, patch sources, and maintenance ownership.\n2. Security patches and firmware updates relevant to the packaging line shall be continuously monitored from vendors and vulnerability advisories, risk-assessed for operational impact, and prioritized using defined deployment timelines based on severity and exploitability.\n3. All patches shall be validated in a representative test environment and deployed only during approved maintenance windows using a rollback-capable procedure that minimizes disruption to conveyor, sensor, and labeling operations."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:41:28.478070+00:00",
+    "scenario_id": "plc_req_09_packaging_patch",
+    "task_name": "Define Patch Management Expectations",
+    "expected_artifact": "Patch Management Requirements",
+    "prompt_mode": "bpmn_plus_standards",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nDefine Patch Management Expectations\n\nExpected output artifact:\nPatch Management Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Network & Protocol Security Requirements\nCurrent task: Define Patch Management Expectations\nNext task: Consolidate Requirements\n\nSecurity principles aligned with IEC 62443:\n- security update management\n- vulnerability monitoring\n- controlled patch deployment\n- maintenance planning",
+    "response": "1. The patch management system must be able to automatically scan the industrial PLC system for vulnerabilities and prioritize patches based on their severity and potential impact on the packaging line.\n2. All patches must be thoroughly tested in a controlled environment before deployment to the production system to ensure they do not introduce new vulnerabilities or disrupt the operation of the conveyor belts, sensors, and labeling units.\n3. The patch management process must include a maintenance planning component that schedules and tracks patch deployments, including documentation of patch installation, verification, and validation to ensure compliance with IEC 62443 security update management principles."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:41:31.955072+00:00",
+    "scenario_id": "plc_req_09_packaging_patch",
+    "task_name": "Define Patch Management Expectations",
+    "expected_artifact": "Patch Management Requirements",
+    "prompt_mode": "standards_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nDefine Patch Management Expectations\n\nExpected output artifact:\nPatch Management Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nSecurity principles aligned with IEC 62443:\n- security update management\n- vulnerability monitoring\n- controlled patch deployment\n- maintenance planning",
+    "response": "1. The PLC patch management process shall continuously monitor vendor advisories and relevant ICS vulnerability sources for the conveyor, sensor, and labeling control components, assess applicability within 5 business days, and track remediation status to closure.\n2. All security patches and firmware updates for PLCs, HMIs, network devices, and engineering workstations on the packaging line shall be validated in a representative test environment for control logic, communications, and production timing impacts before deployment to production.\n3. Patch deployment to the packaging line shall be performed only during approved maintenance windows using documented rollback procedures, verified backups, and post-update functional checks to confirm safe operation of conveyor belts, sensors, and labeling units."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:41:34.975662+00:00",
+    "scenario_id": "plc_req_09_packaging_patch",
+    "task_name": "Define Patch Management Expectations",
+    "expected_artifact": "Patch Management Requirements",
+    "prompt_mode": "standards_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nDefine Patch Management Expectations\n\nExpected output artifact:\nPatch Management Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nSecurity principles aligned with IEC 62443:\n- security update management\n- vulnerability monitoring\n- controlled patch deployment\n- maintenance planning",
+    "response": "1. The patch management process for the industrial PLC system must be able to automatically scan for and identify available security updates for all system components, including firmware and software.\n2. All patches and security updates applied to the PLC system must be thoroughly tested in a controlled environment to ensure they do not introduce new vulnerabilities or disrupt the packaging line's operation.\n3. The PLC system's patch management process must maintain a record of all applied patches, including version numbers, installation dates, and validation results, to facilitate auditing and compliance with IEC 62443 standards."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:41:38.250965+00:00",
+    "scenario_id": "plc_req_09_packaging_patch",
+    "task_name": "Define Patch Management Expectations",
+    "expected_artifact": "Patch Management Requirements",
+    "prompt_mode": "task_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nDefine Patch Management Expectations\n\nExpected output artifact:\nPatch Management Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n",
+    "response": "1. The PLC patch management process shall deploy only vendor-approved firmware and security patches for the controller, HMI, sensor interfaces, and labeling unit communication modules after validation in an offline test environment that replicates the packaging line.\n2. Security patches for the PLC system shall be risk-ranked and applied within defined maintenance windows, with critical vulnerabilities affecting conveyor control, sensor integrity, or label application functions remediated on an expedited schedule approved by operations and engineering.\n3. The patch management process shall maintain a documented inventory, version baseline, deployment record, and rollback procedure for all patchable PLC assets to ensure traceability and safe recovery if a patch disrupts packaging line operation."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:41:39.861550+00:00",
+    "scenario_id": "plc_req_09_packaging_patch",
+    "task_name": "Define Patch Management Expectations",
+    "expected_artifact": "Patch Management Requirements",
+    "prompt_mode": "task_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nDefine Patch Management Expectations\n\nExpected output artifact:\nPatch Management Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n",
+    "response": "1. The patch management process for the industrial PLC system must be able to prioritize and apply security patches within 48 hours of release for critical vulnerabilities.\n2. All patches applied to the PLC system must be thoroughly tested in a simulated environment to ensure they do not introduce any disruptions to the packaging line's operation.\n3. The patch management system must maintain a detailed record of all applied patches, including version numbers, installation dates, and validation results, for auditing and compliance purposes."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:41:42.237000+00:00",
+    "scenario_id": "plc_req_10_conveyor_consolidate",
+    "task_name": "Consolidate Requirements",
+    "expected_artifact": "Draft PLC Security Requirements",
+    "prompt_mode": "bpmn_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nConsolidate Requirements\n\nExpected output artifact:\nDraft PLC Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Patch Management Expectations\nCurrent task: Consolidate Requirements\nNext task: Approve PLC Security Requirements\n",
+    "response": "1. The PLC shall enforce authenticated and role-based access for all programming, configuration, and maintenance actions on the conveyor control system.\n2. The PLC environment shall support controlled patching by requiring validation and scheduled deployment of security updates to firmware and engineering workstations before production use.\n3. The PLC and associated network components shall log and retain security-relevant events, including login attempts, logic changes, and communication faults, to support incident detection and approval review."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:41:43.844567+00:00",
+    "scenario_id": "plc_req_10_conveyor_consolidate",
+    "task_name": "Consolidate Requirements",
+    "expected_artifact": "Draft PLC Security Requirements",
+    "prompt_mode": "bpmn_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nConsolidate Requirements\n\nExpected output artifact:\nDraft PLC Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Patch Management Expectations\nCurrent task: Consolidate Requirements\nNext task: Approve PLC Security Requirements\n",
+    "response": "1. The PLC system must implement secure authentication and authorization mechanisms to restrict access to authorized personnel only.\n2. All network communications between the PLC and other devices on the manufacturing line must be encrypted using industry-standard protocols.\n3. The PLC system must have a regular firmware update process in place to ensure timely application of security patches and updates."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:41:46.966319+00:00",
+    "scenario_id": "plc_req_10_conveyor_consolidate",
+    "task_name": "Consolidate Requirements",
+    "expected_artifact": "Draft PLC Security Requirements",
+    "prompt_mode": "bpmn_plus_standards",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nConsolidate Requirements\n\nExpected output artifact:\nDraft PLC Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Patch Management Expectations\nCurrent task: Consolidate Requirements\nNext task: Approve PLC Security Requirements\n\nSecurity principles aligned with IEC 62443:\n- complete lifecycle coverage\n- traceable security requirements\n- consistency across requirement categories",
+    "response": "1. The PLC shall enforce authenticated and role-based access for all engineering, maintenance, and operator functions affecting conveyor control logic, network settings, and safety-relevant parameters.\n2. The PLC system shall support controlled patching and firmware updates by allowing only authenticated, integrity-verified software packages and by providing a documented method to schedule and validate updates without unsafe conveyor operation.\n3. The PLC security requirements shall be uniquely identified, testable, and traceable to lifecycle activities including implementation, verification, patch management, and approval records in accordance with IEC 62443."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:41:49.139419+00:00",
+    "scenario_id": "plc_req_10_conveyor_consolidate",
+    "task_name": "Consolidate Requirements",
+    "expected_artifact": "Draft PLC Security Requirements",
+    "prompt_mode": "bpmn_plus_standards",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nConsolidate Requirements\n\nExpected output artifact:\nDraft PLC Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Patch Management Expectations\nCurrent task: Consolidate Requirements\nNext task: Approve PLC Security Requirements\n\nSecurity principles aligned with IEC 62443:\n- complete lifecycle coverage\n- traceable security requirements\n- consistency across requirement categories",
+    "response": "1. The PLC system must implement role-based access control to restrict unauthorized modifications to the conveyor system's configuration and parameters.\n2. All PLC firmware and software updates must be digitally signed and verified to ensure authenticity and integrity before installation.\n3. The PLC system must record and store all security-related events, including login attempts, configuration changes, and alarm triggers, for a minimum of 12 months for auditing and forensic analysis purposes."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:41:51.844831+00:00",
+    "scenario_id": "plc_req_10_conveyor_consolidate",
+    "task_name": "Consolidate Requirements",
+    "expected_artifact": "Draft PLC Security Requirements",
+    "prompt_mode": "standards_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nConsolidate Requirements\n\nExpected output artifact:\nDraft PLC Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nSecurity principles aligned with IEC 62443:\n- complete lifecycle coverage\n- traceable security requirements\n- consistency across requirement categories",
+    "response": "1. The PLC shall enforce authenticated and role-based access for all engineering, maintenance, and operator interfaces used to configure, program, or control the conveyor system.\n2. The PLC shall permit only integrity-verified logic, firmware, and configuration updates, with all changes uniquely traceable to approved lifecycle requirements and authorized personnel.\n3. The PLC shall restrict conveyor control communications to explicitly authorized industrial protocols, ports, and devices, and shall generate audit logs for security-relevant access and control events."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:41:55.577927+00:00",
+    "scenario_id": "plc_req_10_conveyor_consolidate",
+    "task_name": "Consolidate Requirements",
+    "expected_artifact": "Draft PLC Security Requirements",
+    "prompt_mode": "standards_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nConsolidate Requirements\n\nExpected output artifact:\nDraft PLC Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nSecurity principles aligned with IEC 62443:\n- complete lifecycle coverage\n- traceable security requirements\n- consistency across requirement categories",
+    "response": "1. The PLC system must implement role-based access control to restrict unauthorized modifications to the conveyor system's control logic and configuration.\n2. All communication protocols used by the PLC for remote monitoring and control must be encrypted using industry-standard protocols, such as TLS or SSH.\n3. The PLC system must have a secure firmware update mechanism that ensures authenticity, integrity, and version control of updated firmware, with automated rollback capabilities in case of update failures."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:41:58.476446+00:00",
+    "scenario_id": "plc_req_10_conveyor_consolidate",
+    "task_name": "Consolidate Requirements",
+    "expected_artifact": "Draft PLC Security Requirements",
+    "prompt_mode": "task_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nConsolidate Requirements\n\nExpected output artifact:\nDraft PLC Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n",
+    "response": "1. The PLC shall require role-based authentication for all logic changes, start/stop commands, and maintenance functions, permitting write access only to authorized engineering and maintenance accounts.\n2. The PLC and its engineering workstation shall use authenticated and encrypted communications for program downloads and supervisory control traffic across the manufacturing network.\n3. The PLC shall generate tamper-resistant audit logs for user logins, logic modifications, firmware changes, and conveyor safety-related command events, and transmit those logs to a centralized monitoring system."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:42:00.416722+00:00",
+    "scenario_id": "plc_req_10_conveyor_consolidate",
+    "task_name": "Consolidate Requirements",
+    "expected_artifact": "Draft PLC Security Requirements",
+    "prompt_mode": "task_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nConsolidate Requirements\n\nExpected output artifact:\nDraft PLC Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n",
+    "response": "1. The PLC system must authenticate and authorize all users and devices before granting access to the conveyor system control interface.\n2. The PLC system must implement encryption for all communication protocols used to exchange data with other devices and systems in the manufacturing line.\n3. The PLC system must detect and respond to anomalies in conveyor system operation, such as unexpected stops or speed changes, to prevent potential security threats."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:42:03.919347+00:00",
+    "scenario_id": "plc_req_11_robot_consolidate",
+    "task_name": "Consolidate Requirements",
+    "expected_artifact": "Draft PLC Security Requirements",
+    "prompt_mode": "bpmn_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nConsolidate Requirements\n\nExpected output artifact:\nDraft PLC Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Patch Management Expectations\nCurrent task: Consolidate Requirements\nNext task: Approve PLC Security Requirements\n",
+    "response": "1. The PLC shall permit authenticated engineering access only via role-based accounts and shall disable or remove all default, shared, and unused credentials on programming and maintenance interfaces.\n2. The PLC and its engineering workstation interfaces shall accept firmware, logic downloads, and configuration changes only when integrity-verified and authorized through a documented change-control process before deployment to the robotic assembly cell.\n3. The PLC shall generate tamper-resistant audit logs for login attempts, logic changes, mode changes, and communications faults with assembly-cell actuators and sensors, and shall retain or forward those logs to a centralized monitoring system."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:42:05.761704+00:00",
+    "scenario_id": "plc_req_11_robot_consolidate",
+    "task_name": "Consolidate Requirements",
+    "expected_artifact": "Draft PLC Security Requirements",
+    "prompt_mode": "bpmn_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nConsolidate Requirements\n\nExpected output artifact:\nDraft PLC Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Patch Management Expectations\nCurrent task: Consolidate Requirements\nNext task: Approve PLC Security Requirements\n",
+    "response": "1. The PLC system must implement role-based access control to restrict unauthorized access to the robotic assembly cell's configuration and operation.\n2. All communication protocols used by the PLC to interact with actuators and sensors must be encrypted to prevent eavesdropping and tampering.\n3. The PLC system must have a built-in intrusion detection mechanism to identify and alert operators of potential security breaches or anomalies in the assembly cell's operation."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:42:09.612674+00:00",
+    "scenario_id": "plc_req_11_robot_consolidate",
+    "task_name": "Consolidate Requirements",
+    "expected_artifact": "Draft PLC Security Requirements",
+    "prompt_mode": "bpmn_plus_standards",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nConsolidate Requirements\n\nExpected output artifact:\nDraft PLC Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Patch Management Expectations\nCurrent task: Consolidate Requirements\nNext task: Approve PLC Security Requirements\n\nSecurity principles aligned with IEC 62443:\n- complete lifecycle coverage\n- traceable security requirements\n- consistency across requirement categories",
+    "response": "1. The PLC shall enforce authenticated and role-based access for all engineering, maintenance, and operational interfaces, restricting logic changes and safety-critical actuator commands to explicitly authorized users and tools.\n2. The PLC system shall support a controlled patch and firmware update process that verifies update authenticity and integrity, allows rollback to a known-good version, and prevents unauthorized or untested software from being installed in the robotic assembly cell.\n3. The PLC security requirements shall be uniquely identified, traceable to IEC 62443-aligned lifecycle phases and asset risks, and maintained consistently across access control, communication, software maintenance, and event logging categories."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:42:12.007285+00:00",
+    "scenario_id": "plc_req_11_robot_consolidate",
+    "task_name": "Consolidate Requirements",
+    "expected_artifact": "Draft PLC Security Requirements",
+    "prompt_mode": "bpmn_plus_standards",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nConsolidate Requirements\n\nExpected output artifact:\nDraft PLC Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Patch Management Expectations\nCurrent task: Consolidate Requirements\nNext task: Approve PLC Security Requirements\n\nSecurity principles aligned with IEC 62443:\n- complete lifecycle coverage\n- traceable security requirements\n- consistency across requirement categories",
+    "response": "1. The PLC system shall implement role-based access control to restrict unauthorized modifications to the robotic assembly cell's configuration and programming.\n2. All communication protocols used by the PLC to interact with actuators and sensors shall be encrypted and authenticated to prevent eavesdropping and tampering.\n3. The PLC system shall maintain a secure audit log of all significant events, including system changes, errors, and access attempts, to facilitate incident response and forensic analysis."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:42:15.344565+00:00",
+    "scenario_id": "plc_req_11_robot_consolidate",
+    "task_name": "Consolidate Requirements",
+    "expected_artifact": "Draft PLC Security Requirements",
+    "prompt_mode": "standards_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nConsolidate Requirements\n\nExpected output artifact:\nDraft PLC Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nSecurity principles aligned with IEC 62443:\n- complete lifecycle coverage\n- traceable security requirements\n- consistency across requirement categories",
+    "response": "1. The PLC shall enforce role-based authentication and authorization for all engineering, maintenance, and remote access functions, permitting safety-critical logic changes only to explicitly approved roles.\n2. The PLC shall protect control logic, configuration, and firmware against unauthorized modification by using cryptographic integrity verification, signed updates, and change-event logging with traceable user identity and timestamp.\n3. The PLC shall restrict communications to explicitly approved devices, protocols, and network paths for the robotic assembly cell, and shall place the controller in a defined safe state upon detection of invalid or malicious command traffic."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:42:20.350355+00:00",
+    "scenario_id": "plc_req_11_robot_consolidate",
+    "task_name": "Consolidate Requirements",
+    "expected_artifact": "Draft PLC Security Requirements",
+    "prompt_mode": "standards_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nConsolidate Requirements\n\nExpected output artifact:\nDraft PLC Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nSecurity principles aligned with IEC 62443:\n- complete lifecycle coverage\n- traceable security requirements\n- consistency across requirement categories",
+    "response": "1. The PLC system shall implement role-based access control to restrict unauthorized modifications to the robotic assembly cell's configuration and programming.\n2. All communication protocols used by the PLC to interact with actuators and sensors shall be encrypted and authenticated to prevent eavesdropping and tampering.\n3. The PLC system shall maintain a secure audit log of all significant events, including system changes, errors, and access attempts, to facilitate incident response and forensic analysis."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:42:23.500373+00:00",
+    "scenario_id": "plc_req_11_robot_consolidate",
+    "task_name": "Consolidate Requirements",
+    "expected_artifact": "Draft PLC Security Requirements",
+    "prompt_mode": "task_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nConsolidate Requirements\n\nExpected output artifact:\nDraft PLC Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n",
+    "response": "1. The PLC shall enforce authenticated and role-based access for all engineering workstation, HMI, and maintenance connections, permitting logic changes, mode changes, and firmware updates only to authorized users.\n2. The PLC shall cryptographically verify and log every logic download, configuration change, and firmware update, and shall reject any unsigned, altered, or unapproved code before execution.\n3. The PLC shall place all external communications with the robotic assembly cell network in a restricted allowlist mode, permitting only required protocols, devices, and commands and blocking all unauthorized traffic to actuator and sensor control functions."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:42:27.602875+00:00",
+    "scenario_id": "plc_req_11_robot_consolidate",
+    "task_name": "Consolidate Requirements",
+    "expected_artifact": "Draft PLC Security Requirements",
+    "prompt_mode": "task_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a robotic assembly cell with multiple actuators and sensors.\n\nCurrent engineering task:\nConsolidate Requirements\n\nExpected output artifact:\nDraft PLC Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n",
+    "response": "1. The PLC system must authenticate and authorize all access attempts to the robotic assembly cell's control interface to prevent unauthorized modifications to actuator and sensor configurations.\n2. The PLC system must implement encryption for all communication protocols used to exchange data between the PLC, actuators, and sensors to prevent eavesdropping and tampering.\n3. The PLC system must detect and respond to anomalies in actuator and sensor data in real-time to prevent potential security incidents caused by faulty or compromised devices."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:42:30.291017+00:00",
+    "scenario_id": "plc_req_12_packaging_consolidate",
+    "task_name": "Consolidate Requirements",
+    "expected_artifact": "Draft PLC Security Requirements",
+    "prompt_mode": "bpmn_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nConsolidate Requirements\n\nExpected output artifact:\nDraft PLC Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Patch Management Expectations\nCurrent task: Consolidate Requirements\nNext task: Approve PLC Security Requirements\n",
+    "response": "1. The PLC shall restrict logic downloads, configuration changes, and mode transitions to authenticated and authorized engineering workstations and user accounts.\n2. The PLC shall enforce network segmentation and permit only explicitly approved communications with conveyor, sensor, labeling, and supervisory system interfaces required for packaging line operation.\n3. The PLC shall generate tamper-evident audit logs for program changes, firmware updates, user access events, and security-relevant faults, and shall retain or forward these logs to the plant monitoring system."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:42:32.171339+00:00",
+    "scenario_id": "plc_req_12_packaging_consolidate",
+    "task_name": "Consolidate Requirements",
+    "expected_artifact": "Draft PLC Security Requirements",
+    "prompt_mode": "bpmn_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nConsolidate Requirements\n\nExpected output artifact:\nDraft PLC Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Patch Management Expectations\nCurrent task: Consolidate Requirements\nNext task: Approve PLC Security Requirements\n",
+    "response": "1. The PLC system must implement role-based access control to restrict operator access to authorized functions and parameters.\n2. All communication protocols used by the PLC system, including those for sensor data and labeling unit control, must be encrypted to prevent eavesdropping and tampering.\n3. The PLC system must have a secure firmware update mechanism that ensures authenticity and integrity of updates, and allows for remote updates with minimal downtime."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:42:34.399047+00:00",
+    "scenario_id": "plc_req_12_packaging_consolidate",
+    "task_name": "Consolidate Requirements",
+    "expected_artifact": "Draft PLC Security Requirements",
+    "prompt_mode": "bpmn_plus_standards",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nConsolidate Requirements\n\nExpected output artifact:\nDraft PLC Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Patch Management Expectations\nCurrent task: Consolidate Requirements\nNext task: Approve PLC Security Requirements\n\nSecurity principles aligned with IEC 62443:\n- complete lifecycle coverage\n- traceable security requirements\n- consistency across requirement categories",
+    "response": "1. The PLC shall enforce role-based authentication and authorization for all engineering, operator, and maintenance access to conveyor, sensor, and labeling control functions.\n2. The PLC shall permit only authenticated and integrity-verified firmware, logic, and configuration updates in accordance with the defined patch management process.\n3. Each PLC security requirement shall be uniquely identified, mapped to the packaging line assets and IEC 62443 security categories, and maintained under version control for lifecycle traceability."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:42:36.761498+00:00",
+    "scenario_id": "plc_req_12_packaging_consolidate",
+    "task_name": "Consolidate Requirements",
+    "expected_artifact": "Draft PLC Security Requirements",
+    "prompt_mode": "bpmn_plus_standards",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nConsolidate Requirements\n\nExpected output artifact:\nDraft PLC Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Define Patch Management Expectations\nCurrent task: Consolidate Requirements\nNext task: Approve PLC Security Requirements\n\nSecurity principles aligned with IEC 62443:\n- complete lifecycle coverage\n- traceable security requirements\n- consistency across requirement categories",
+    "response": "1. The PLC system shall implement role-based access control to restrict operator access to authorized functions and parameters for the packaging line.\n2. All communication protocols used by the PLC for interacting with sensors, conveyor belts, and labeling units shall be encrypted and authenticated to prevent eavesdropping and tampering.\n3. The PLC system shall maintain a secure audit log of all significant events, including system changes, errors, and access attempts, to facilitate incident response and forensic analysis."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:42:40.046350+00:00",
+    "scenario_id": "plc_req_12_packaging_consolidate",
+    "task_name": "Consolidate Requirements",
+    "expected_artifact": "Draft PLC Security Requirements",
+    "prompt_mode": "standards_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nConsolidate Requirements\n\nExpected output artifact:\nDraft PLC Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nSecurity principles aligned with IEC 62443:\n- complete lifecycle coverage\n- traceable security requirements\n- consistency across requirement categories",
+    "response": "1. The PLC shall enforce role-based authentication and authorization for all engineering, operator, and maintenance access to conveyor, sensor, and labeling control functions, with each access requirement uniquely traceable to IEC 62443 security levels and system lifecycle phase.\n2. The PLC and connected engineering interfaces shall permit only authenticated and integrity-verified logic, firmware, and recipe downloads, with all changes version-controlled and linked to approved security requirements for commissioning, operation, and maintenance.\n3. The packaging line control network shall segment the PLC from non-control systems and require monitored, encrypted communications for external and inter-device connections affecting conveyor, sensor, or labeling operations, with requirements defined consistently across design, deployment, and support activities."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:42:43.691066+00:00",
+    "scenario_id": "plc_req_12_packaging_consolidate",
+    "task_name": "Consolidate Requirements",
+    "expected_artifact": "Draft PLC Security Requirements",
+    "prompt_mode": "standards_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nConsolidate Requirements\n\nExpected output artifact:\nDraft PLC Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nSecurity principles aligned with IEC 62443:\n- complete lifecycle coverage\n- traceable security requirements\n- consistency across requirement categories",
+    "response": "1. The PLC system shall implement role-based access control to restrict operator access to authorized functions and parameters for the packaging line.\n2. The PLC system shall encrypt all communication protocols used for data exchange between the PLC, sensors, and labeling units to prevent eavesdropping and tampering.\n3. The PLC system shall have a secure firmware update mechanism that ensures authenticity, integrity, and version control of firmware updates to prevent unauthorized modifications."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:42:47.563868+00:00",
+    "scenario_id": "plc_req_12_packaging_consolidate",
+    "task_name": "Consolidate Requirements",
+    "expected_artifact": "Draft PLC Security Requirements",
+    "prompt_mode": "task_only",
+    "model": "gpt-5.4",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nConsolidate Requirements\n\nExpected output artifact:\nDraft PLC Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n",
+    "response": "1. The PLC shall accept logic downloads, firmware updates, and engineering mode access only from authenticated engineering workstations on a segmented maintenance network using role-based access control.\n2. The PLC shall fail to a safe state by stopping conveyors and inhibiting labeling actuators when sensor inputs are invalid, communication with critical I/O is lost, or unauthorized control commands are detected.\n3. The PLC shall generate tamper-evident logs for program changes, mode transitions, user access, and safety-relevant faults, and shall forward these records to a centralized monitoring system for retention and review."
+  },
+  {
+    "timestamp_utc": "2026-03-12T20:42:50.074512+00:00",
+    "scenario_id": "plc_req_12_packaging_consolidate",
+    "task_name": "Consolidate Requirements",
+    "expected_artifact": "Draft PLC Security Requirements",
+    "prompt_mode": "task_only",
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling a packaging line with conveyor belts, sensors, and labeling units.\n\nCurrent engineering task:\nConsolidate Requirements\n\nExpected output artifact:\nDraft PLC Security Requirements\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n",
+    "response": "1. The PLC system must authenticate and authorize all access attempts to the conveyor belt control logic to prevent unauthorized modifications.\n2. The labeling unit's data interface must be encrypted to protect sensitive product information from eavesdropping and tampering.\n3. The PLC system must implement intrusion detection and alerting mechanisms to detect and respond to potential security breaches on the sensor networks."
+  }
+]
