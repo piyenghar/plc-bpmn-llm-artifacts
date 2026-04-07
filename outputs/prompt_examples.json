@@ -1,0 +1,40 @@
+{
+  "description": "Representative prompt examples (one per prompt_mode) from scenario plc_req_01_conveyor_access.",
+  "source_file": "outputs/results.json",
+  "selection_rule": {
+    "scenario_id": "plc_req_01_conveyor_access",
+    "model": "gpt-5.4",
+    "prompt_modes": [
+      "task_only",
+      "bpmn_only",
+      "standards_only",
+      "bpmn_plus_standards"
+    ]
+  },
+  "examples": {
+    "task_only": {
+      "scenario_id": "plc_req_01_conveyor_access",
+      "task_name": "Define Config & Access Requirements",
+      "model": "gpt-5.4",
+      "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nDefine Config & Access Requirements\n\nExpected output artifact:\nConfig & Access Requirements Spec\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n"
+    },
+    "bpmn_only": {
+      "scenario_id": "plc_req_01_conveyor_access",
+      "task_name": "Define Config & Access Requirements",
+      "model": "gpt-5.4",
+      "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nDefine Config & Access Requirements\n\nExpected output artifact:\nConfig & Access Requirements Spec\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Review PLC vendor docs & specs\nCurrent task: Define Config & Access Requirements\nNext task: Define Network & Protocol Security Requirements\n"
+    },
+    "standards_only": {
+      "scenario_id": "plc_req_01_conveyor_access",
+      "task_name": "Define Config & Access Requirements",
+      "model": "gpt-5.4",
+      "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nDefine Config & Access Requirements\n\nExpected output artifact:\nConfig & Access Requirements Spec\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nSecurity principles aligned with IEC 62443:\n- identification and authentication control\n- use control\n- restricted engineering access\n- role-based access"
+    },
+    "bpmn_plus_standards": {
+      "scenario_id": "plc_req_01_conveyor_access",
+      "task_name": "Define Config & Access Requirements",
+      "model": "gpt-5.4",
+      "prompt": "You are a cybersecurity engineer working on an industrial PLC system.\n\nSystem context:\nIndustrial PLC controlling an automated conveyor system in a manufacturing line.\n\nCurrent engineering task:\nDefine Config & Access Requirements\n\nExpected output artifact:\nConfig & Access Requirements Spec\n\nTask:\nGenerate exactly 3 concise and engineering-oriented security requirements that are most relevant to the current task.\n\nOutput format rules:\n1. Return exactly 3 numbered items.\n2. Each item must contain one requirement sentence only.\n3. Do not include explanations, headings, introductions, or conclusions.\n4. Do not repeat the same idea in different words.\n5. Make each requirement specific to the given task and system context.\n\nProcess context from the BPMN model:\nPrevious task: Review PLC vendor docs & specs\nCurrent task: Define Config & Access Requirements\nNext task: Define Network & Protocol Security Requirements\n\nSecurity principles aligned with IEC 62443:\n- identification and authentication control\n- use control\n- restricted engineering access\n- role-based access"
+    }
+  }
+}
